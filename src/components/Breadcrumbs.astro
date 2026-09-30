@@ -1,0 +1,36 @@
+---
+/**
+ * Breadcrumbs — semantic, keyboard-friendly breadcrumb navigation.
+ */
+export interface Crumb {
+  label: string;
+  href?: string;
+}
+interface Props {
+  items: Crumb[];
+}
+const { items } = Astro.props;
+const last = items.length - 1;
+---
+<nav aria-label="Breadcrumb" class="text-sm text-ink-faint">
+  <ol class="flex flex-wrap items-center gap-1.5">
+    {items.map((item, i) => (
+      <li class="flex items-center gap-1.5">
+        {item.href ? (
+          <a href={item.href} class="rounded-sm transition-colors hover:text-brand hover:underline">
+            {item.label}
+          </a>
+        ) : (
+          <span aria-current="page" class="font-medium text-ink-soft">
+            {item.label}
+          </span>
+        )}
+        {i < last && (
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true" class="text-ink-faint/60">
+            <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>

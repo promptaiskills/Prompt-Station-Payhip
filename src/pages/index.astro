@@ -1,0 +1,194 @@
+---
+/**
+ * Homepage — a focused, honest storefront: hero, trust, featured products,
+ * category browse, latest drops, how-it-works, service CTA.
+ */
+import BaseLayout from '../components/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ProductCard from '../components/ProductCard.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { SITE, SERVICE } from '../config/site.mjs';
+import {
+  taxonomy,
+  getFeaturedProducts,
+  getLatestProducts,
+  getFeaturedCategories,
+  getProducts,
+} from '../lib/catalog.ts';
+
+const featured = getFeaturedProducts(4);
+const latest = getLatestProducts(6);
+const categories = getFeaturedCategories();
+const totalProducts = getProducts().length;
+const subCount = taxonomy.stats?.subcategories ?? 0;
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE.name,
+  url: SITE.url,
+  description: SITE.description,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: SITE.contact.email,
+    contactType: 'customer support',
+  },
+};
+const trust = [
+  { title: 'Instant delivery', body: 'Files and receipt arrive by email the moment payment succeeds.' },
+  { title: 'Secure checkout', body: 'Payments are processed by Payhip — cards via Stripe, PayPal available.' },
+  { title: 'Growable catalog', body: `${subCount}+ skill niches organised across ${taxonomy.stats?.categories ?? 0} categories.` },
+];
+---
+<BaseLayout
+  description={`${SITE.tagline}. ${SITE.description}`}
+  canonical="/"
+  ogType="website"
+>
+  <JsonLd data={orgSchema} />
+
+  <!-- ============= HERO ============= -->
+  <section class="border-b border-line bg-surface">
+    <div class="container-x grid items-center gap-10 py-14 md:py-20 lg:grid-cols-[1.05fr_0.95fr]">
+      <div>
+        <p class="eyebrow">AI skills marketplace</p>
+        <h1 class="mt-4 max-w-2xl text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
+          Buy AI skills that do <span class="text-brand">structural work</span> — not generic answers
+        </h1>
+        <p class="mt-5 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
+          {SITE.name} is a marketplace for ready-to-use AI skills: prompt packs and workflow kits engineered for
+          real workflow impact. Pick a niche, buy once, and produce high quality work from AI in minutes.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="/catalog/" class="btn-primary px-6 py-3 text-base">Browse the catalog</a>
+          <a href="/request/" class="btn-outline px-6 py-3 text-base">Request a custom skill</a>
+        </div>
+        <dl class="mt-10 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-3">
+          {trust.map((t) => (
+            <div class="rounded-md border border-line bg-paper px-4 py-3">
+              <dt class="font-display text-sm font-bold">{t.title}</dt>
+              <dd class="mt-1 text-xs leading-relaxed text-ink-faint">{t.body}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <div class="hidden lg:block" aria-hidden="true">
+        <div class="grid grid-cols-2 gap-4">
+          {featured.map((p) => (
+            <a href={`/products/${p.slug}/`} class={`group overflow-hidden rounded-md border border-line bg-surface transition hover:shadow-md ${p.featured ? '' : ''}`}>
+              <span class="block aspect-[4/3] overflow-hidden bg-brand-soft">
+                <img src={`/${p.image ?? 'images/placeholder.svg'}`} alt="" width="1200" height="900" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]" />
+              </span>
+              <span class="block border-t border-line px-3 py-2.5">
+                <span class="line-clamp-1 font-display text-sm font-bold">{p.name}</span>
+                <span class="mt-0.5 block text-xs text-ink-faint">{p.subcategoryTitle}</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= FEATURED PRODUCTS ============= -->
+  <section class="container-x py-16 sm:py-20">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <SectionHeading eyebrow="Featured skills" title="Editor’s picks, ready to run" size="md" />
+      <a href="/catalog/" class="btn-ghost">View all products →</a>
+    </div>
+    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {featured.map((p) => <ProductCard product={p} />)}
+    </div>
+  </section>
+
+  <!-- ============= CATEGORY BROWSE ============= -->
+  <section class="border-y border-line bg-surface">
+    <div class="container-x py-16 sm:py-20">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <SectionHeading eyebrow="Browse the store" title="Find your skill niche" lede="Every niche is a collection of ready-made AI skills. Choose a category to see the skill collections inside." size="md" />
+        <a href="/catalog/" class="btn-ghost">All categories →</a>
+      </div>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {categories.map((c) => (
+          <a href={`/catalog/${c.category?.key}/`} class="card card-hover group flex flex-col gap-2 p-5">
+            <span class="flex items-center justify-between">
+              <span class="eyebrow">Category</span>
+              <span class="text-xs font-semibold text-ink-faint">{c.category?.subcategories.length} collections</span>
+            </span>
+            <span class="font-display text-lg font-bold leading-snug tracking-tight transition-colors group-hover:text-brand">
+              {c.category?.title}
+            </span>
+            <span class="line-clamp-2 text-sm leading-relaxed text-ink-soft">{c.category?.description}</span>
+            <span class="mt-1 flex items-center gap-2 text-xs text-ink-faint">
+              <span class="tabular">{c.productCount} products available</span>
+              <span aria-hidden="true">·</span>
+              <span class="tabular">{c.subcategoriesWithProducts} active collections</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= LATEST DROPS ============= -->
+  {latest.length > 0 && (
+    <section class="container-x py-16 sm:py-20">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <SectionHeading eyebrow="New this week" title="Latest skill drops" size="md" />
+        <a href="/search/" class="btn-ghost">Search everything →</a>
+      </div>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {latest.map((p) => <ProductCard product={p} />)}
+      </div>
+      <p class="mt-6 text-sm text-ink-faint">
+        {totalProducts} products live now — the catalog grows by adding rows to the product CSV.
+      </p>
+    </section>
+  )}
+
+  <!-- ============= HOW IT WORKS ============= -->
+  <section class="border-y border-line bg-surface">
+    <div class="container-x py-16 sm:py-20">
+      <SectionHeading eyebrow="How buying works" title="Buy once. Use it in your workflow today." align="center" size="md" />
+      <ol class="mx-auto mt-10 grid max-w-4xl gap-6 sm:grid-cols-3">
+        {[
+          { n: '01', t: 'Discover', b: 'Browse skills by category or search the full catalog. Every skill lists what it does and what’s inside.' },
+          { n: '02', t: 'Buy securely', b: 'Checkout opens on Payhip’s secure payment page in a new tab. No account required.' },
+          { n: '03', t: 'Instant access', b: 'Payhip emails your receipt and secure download link instantly after payment.' },
+        ].map((s) => (
+          <li class="relative rounded-md border border-line bg-paper p-5">
+            <span class="font-display text-3xl font-bold text-brand/20">{s.n}</span>
+            <h3 class="mt-1 font-display text-lg font-bold tracking-tight">{s.t}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">{s.b}</p>
+          </li>
+        ))}
+      </ol>
+      <p class="mt-8 text-center text-sm text-ink-soft">
+        Full details in <a href="/how-it-works/" class="font-semibold text-brand underline-offset-2 hover:underline">How it works</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============= SERVICE CTA ============= -->
+  <section class="container-x py-16 sm:py-20">
+    <div class="card relative overflow-hidden bg-ink px-6 py-12 text-paper sm:px-12">
+      <div class="grid items-center gap-8 lg:grid-cols-[1.3fr_0.7fr]">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.16em] text-paper/60">{SERVICE.eyebrow}</p>
+          <h2 class="mt-3 max-w-xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">{SERVICE.headline}</h2>
+          <p class="mt-4 max-w-xl text-sm leading-relaxed text-paper/70 sm:text-base">{SERVICE.intro}</p>
+          <a href="/request/" class="btn-primary mt-7 px-6 py-3 text-base">Start a request →</a>
+        </div>
+        <ul class="space-y-3 text-sm text-paper/80">
+          {SERVICE.whatYouCanRequest.map((item) => (
+            <li class="flex items-start gap-3">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true" class="mt-0.5 shrink-0 text-paper/60"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.2"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

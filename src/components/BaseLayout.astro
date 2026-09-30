@@ -1,0 +1,89 @@
+---
+/**
+ * BaseLayout — the document shell: SEO metadata, OG/social, JSON-LD slot,
+ * skip-link, global scripts, header & footer.
+ */
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import { SITE, SEO } from '../config/site.mjs';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Path used for the canonical URL, e.g. '/products/slug/'. Defaults to current path. */
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  bodyClass?: string;
+}
+
+const { title, description, canonical, ogImage = SEO.ogImage, ogType = 'website', bodyClass = '' } = Astro.props;
+
+const pageTitle = title ? SEO.titleTemplate(title) : SEO.defaultTitle;
+const pageDescription = description || SEO.defaultDescription;
+const path = canonical ?? Astro.url.pathname;
+const absUrl = `${SITE.url}${path === '/' ? '/' : path.replace(/\/{2,}/g, '/')}`;
+const absOg = ogImage.startsWith('http') ? ogImage : `${SITE.url}${ogImage}`;
+const hasEmail = SITE.contact.email && !/YOUR_/.test(SITE.contact.email);
+
+const schemaWebSite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: SITE.url,
+  description: SITE.description,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE.url}/search?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+<!doctype html>
+<html lang={SITE.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={absUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#15181d" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={absUrl} />
+    <meta property="og:image" content={absOg} />
+    <meta property="og:image:alt" content={SEO.ogImageAlt} />
+    <meta property="og:locale" content={SITE.locale} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content={SEO.twitterCard} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={absOg} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(schemaWebSite)} />
+
+    <slot name="head" />
+  </head>
+  <body class={bodyClass}>
+    <a href="#main-content" class="is-sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-surface focus:px-4 focus:py-2 focus:font-semibold focus:text-brand focus:ring-2 focus:ring-brand">
+      Skip to content
+    </a>
+    {hasEmail && <p class="is-sr-only" aria-hidden="true">{SITE.contact.email}</p>}
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import '../scripts/header.ts';
+      import '../scripts/buy.ts';
+    </script>
+  </body>
+</html>

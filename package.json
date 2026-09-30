@@ -1,0 +1,34 @@
+{
+  "name": "prompt-station-storefront",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Prompt Station — data-driven digital storefront for AI skills, built with Astro + Tailwind, fulfilled through Payhip, deployed on Netlify.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "taxonomy": "node scripts/build-taxonomy.mjs",
+    "assets": "node scripts/generate-assets.mjs",
+    "prebuild": "node scripts/build-taxonomy.mjs && node scripts/generate-assets.mjs",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy --prod --build"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
+    "astro": "^7.2.9",
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^5.9.0"
+  }
+}

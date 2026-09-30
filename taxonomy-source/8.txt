@@ -1,0 +1,213 @@
+
+
+Advanced Material Informatics & Molecular Engineering
+601. Graphene Layer Defect Crystallography: Processing scanning tunneling electron microscope images to flag atomic misalignment in graphene sheets.
+602. Superconducting Alloy Phase Transition Models: Simulating molecular behaviors at near-absolute zero to discover high-temperature superconducting materials.
+603. Piezoelectric Polymer Kinetic Stress Models: Engineering smart plastics that generate electric currents when squeezed or bent by human motion.
+604. Hydrophobic Surface Micro-Texture Solvers: Designing microscopic structural patterns on metals to repel water and ice without chemical coatings.
+605. Shape-Memory Alloy Crystalline Decay Models: Predicting when smart medical stents or actuators will lose their original structural memory shapes.
+606. Self-Healing Concrete Micro-Capsule Maps: Simulating the optimal spatial dispersion of bacterial capsules inside liquid concrete mixes to heal road cracks.
+607. Refractory Ceramic Thermal Shock Analytics: Processing ultrasonic stress data to calculate structural fracture points in space shuttle heat shields.
+608. Bio-Synthetic Bone Scaffolding Porosity Engines: Designing 3D printable bone replacements with custom structural pores that speed up human cell growth.
+609. Organic LED (OLED) Chemical Lifetime Predictors: Modeling the molecular breakdown rates of blue organic compounds to stop phone screen burn-ins.
+610. Aerogel Insulation Structural Density Optimizers: Simulating gas-trapping matrix geometries to create lighter insulation blankets for deep-sea pipelines.
+611. Materials Selection Advisor: Helping makers and buyers choose the right material for strength, cost, and use.
+612. Recycling Label Decoder: Explaining material recycling symbols and what's actually recyclable.
+613. Composite Materials Basics Tutor: Explaining composites like fiberglass and carbon fiber in everyday terms.
+614. Nanotech Myths & Facts Guide: Providing honest, evidence-based context on nanotechnology claims.
+615. Nonstick & Cookware Guide: Helping people choose cookware materials that fit health and durability needs.
+616. Fabric & Furniture Material Care Guide: Teaching care routines matched to material types at home.
+617. Packaging Materials Decoder: Helping people understand packaging materials and their environmental impact.
+618. Smart Textiles Explainer: Explaining how modern smart and performance textiles work.
+619. Glasses Lens Material Guide: Helping people choose lens materials for optics and protection.
+620. Material Testing Home Basics: Teaching simple ways to identify and test common materials at home.
+Precision Bio-Manufacturing & Synthetic Biology
+611. Bioreactor Nutrient Feed Micro-Valve Systems: Real-time adjustments of glucose and oxygen feeds inside massive fermentation tanks growing artificial meat.
+612. CRISPR Off-Target Mutation Cleansing Tools: Scanning cellular genomic sequences to flag unintended DNA cuts before therapeutic engineering.
+613. Synthetic Enzyme Catalytic Speed Optimizers: Re-engineering protein loops to speed up plastic-eating bacteria in recycling facilities.
+614. Algae Biofuel Crystalline Lipid Yield Sorters: Processing optical laser metrics to isolate and clone individual high-energy oil producing micro-algae cells.
+615. Messenger RNA (mRNA) Structural Half-Life Models: Modulating the molecular tail configurations of synthetic vaccines to extend their storage shelf stability.
+616. Cellular Silk Protein Tensile Strength Designs: Simulating amino acid patterns to spin bio-engineered spider silk for surgical stitches.
+617. Plant Chloroplast Photosynthetic Efficiency Maximizers: Modeling genetic changes in crops to capture more sunlight and boost harvest yields.
+618. Fungal Mycelium Packaging Density Regulators: Adjusting temperature and humidity grow logs to turn mushroom roots into fire-resistant shipping blocks.
+619. Bacterial Insulin Batch Contamination Monitors: Analyzing continuous mass spectrometer gas streams to stop medical hormone manufacturing errors.
+620. Synthetic Antibody Binding Kinematics Simulators: Modeling molecular docking paths to match lab-grown proteins against rare viral envelopes.
+621. Fermentation Home Basics Guide: Teaching safe, practical home fermentation of foods and drinks.
+622. Probiotic Label Decoder: Helping shoppers understand probiotic claims and choose wisely.
+623. Biotech Career Pathfinder: Mapping realistic careers in biotech, lab work, and bio-manufacturing.
+624. Cell Culture Explained Tutor: Explaining how cell cultures are grown and used, accessibly.
+625. GMO Facts & Misconceptions Guide: Providing balanced, evidence-based context on genetically modified foods.
+626. Biohacking Claims Checker: Teaching people to evaluate wellness and biohacking claims critically.
+627. Vaccine Science Explainer: Explaining how vaccines work and how they're developed, plainly.
+628. Gene Editing Basics Tutor: Explaining what gene editing is and its real applications and limits.
+629. Lab Safety Basics Guide: Teaching basic lab safety habits for students and hobbyists.
+630. Biodegradable Product Decoder: Helping consumers understand biodegradability claims honestly.
+Autonomous Subterranean Defense & Tectonic Security
+621. Underground Tunnel Seismic Collapse Early Warnings: Processing micro-geophone sound streams to warn subterranean defense facilities of tunnel shifts.
+622. Subsurface Ground-Penetrating Radar Threat Sorters: Distinguishing buried military bunkers from ancient archeological ruins using satellite microwave radar logs.
+623. Deep-Earth Drilling Bit Acoustic Friction Dampers: Real-time micro-adjustments of torque lines to stop heavy drill bit shattering inside deep rock shelves.
+624. Tectonic Fault Slip Stress Trajectory Projects: Simulating continental plate friction variations to map out earthquakes zones near hydro-dams.
+625. Abandoned Mine Shaft Acid Leak Trackers: Processing autonomous rolling robot sensor feeds to find toxic water breaching abandoned mining zones.
+626. Subterranean Cavity Drone Laser Flight Stabilizers: Correcting autonomous drone balance code as it flies through narrow, absolute-dark underground caves.
+627. Magma Chamber Gas Pressure Upheaval Alarms: Tracking chemical and micro-tilt shifts around active volcanoes to map impending magma movements.
+628. Underground Gas Storage Facility Caprock Integrity Checks: Processing seismic sound wave returns to confirm that stored gas reserves aren't cracking caprock seals.
+629. Sub-Surface Aquifer Saltwater Intrusion Vectors: Correlating water well salinity changes to warn coastal cities before seawater ruins clean drinking reserves.
+630. Karst Terrain Sinkhole Cavity Formation Maps: Analyzing micro-gravitational satellite changes to locate underground cave collapses before streets drop.
+631. Earthquake Alert App Guide: Helping people choose and use earthquake early-warning apps.
+632. Underground Utility Safety Guide: Teaching homeowners to call before digging and read utility markers.
+633. Basement Flood Prevention Planner: Designing practical basement waterproofing and flood prevention.
+634. Sinkhole Awareness Guide: Teaching people to recognize signs of ground instability near homes.
+635. Cave Exploration Safety Guide: Teaching safe, responsible caving for beginners.
+636. Subway & Tunnel Safety Awareness: Teaching safe behavior in underground transit systems.
+637. Landslide Awareness Guide: Helping people understand and recognize landslide risk signs.
+638. Storm Shelter Planning Guide: Designing practical safe rooms and storm shelter plans.
+639. Geohazard Insurance Guide: Explaining what geohazards home insurance does and doesn't cover.
+640. Volcanic Ash Preparedness Guide: Teaching practical preparation for volcanic ash events.
+Deep-Tech Regulatory Compliance & Algorithmic Auditing
+631. Autonomous Vehicle Crash Liability Code Auditors: Scanning black-box sensor logs after accidents to prove whether human or AI software caused the crash.
+632. Cross-Border Crypto Transaction Privacy Sanction Scans: Tracking obfuscated crypto ledger histories to instantly flag addresses linked to restricted foreign states.
+633. Biometric Face Recognition Unbiased Training Evaluators: Stripping demographic imbalances from law enforcement databases to ensure unbiased matching.
+634. Generative Content Watermark Manipulation Catchers: Finding pixel-level alterations designed to strip invisible safety watermarks from fake corporate media.
+635. Medical AI Diagnostic Recommendation Liability Sweepers: Auditing clinical software paths to ensure suggestions clear standard medical malpractice criteria.
+636. Enterprise Carbon Offset Greenwashing Compliance Audits: Correlating corporate emission reports with active satellite forest growth data to verify carbon credits.
+637. Algorithmic High-Frequency Trading Market Manipulator Traps: Scanning order-book logs millisecond by millisecond to catch flash-crashing trading bots.
+638. Deepfake Corporate Audio Voice Cloning Decoy Traps: Generating real-time high-frequency noise layers over executive phones to block unauthorized AI voice recordings.
+639. Smart Contract Automated Tax Hole Closers: Reviewing multi-tier web3 trading codes to flag transactions dodging international capital gains laws.
+640. AI Code Plagiarism Intellectual Property License Sweepers: Scanning software development banks to ensure generated code doesn't replicate copyrighted core systems.
+641. AI Use Policy Writer: Drafting practical personal and small-team policies for using AI tools responsibly.
+642. Bias in AI Awareness Guide: Teaching non-experts how AI bias happens and how to question it.
+643. Data Privacy Rights Tutor: Explaining privacy rights and how to exercise them.
+644. Algorithmic Literacy Coach: Teaching people to understand and question the algorithms shaping their feeds.
+645. Consent & Data Use Explainer: Explaining how companies use personal data and what consent means.
+646. AI Content Labeling Guide: Helping creators label AI-generated content honestly and legally.
+647. Small Business Compliance Checklist: Building a practical regulatory checklist for small businesses.
+648. Deepfake Evidence Awareness: Teaching people how manipulated media is created and verified.
+649. Scoring Systems Explainer: Explaining credit, risk, and other scoring systems that affect people.
+650. Algorithmic Audit Basics Tutor: Explaining what algorithm audits check and why they matter.
+Specialized Deep-Ocean Science & Marine Archeology
+641. Benthic Abyssal Trench Sonar Topography Engines: Processing multi-beam echo soundings to create 3D visual blueprints of deep ocean floor trenches.
+642. Deep-Sea Hydrophone Whale Social Graph Trackers: Sorting acoustic voice modulations from wild pod arrays to map migration patterns across oceans.
+643. Sunken Ship Chemical Cargo Leak Plume Forecasts: Simulating subsea current vectors to track heavy chemical decay movement from historic wrecks.
+644. Submerged Ancient City Foundation Lidar Removers: Stripping ocean wave light refractions from aerial laser data to map sunken ancient coastal walls.
+645. Marine Permafrost Gas Hydrate Outgassing Alarms: Analyzing deep-water thermal feeds to find underwater methane ice packs melting into gas.
+646. Abyssal Autonomous Vehicle Ballast Depth Schedulers: Calculating micro-oil pump volumes for deep-sea research pods navigating changing water densities.
+647. Coral Polyp Micro-Glow Health Spectrum Graders: Processing underwater ultraviolet photography to score live coral tissue stress from distance.
+648. Subsea Volcanic Plume Ash Dispersal Vector Models: Tracking oceanic chemical shifts to map safety channels for deep-water mining machinery.
+649. Deep-Ocean Fiber Optic Cable Shark Attack Acoustic Monitors: Isolating biting frequencies from normal ocean movement vibrations on underwater internet wires.
+650. Ancient Seafloor Amphora Pottery Array Spatial Patchers: Processing robot camera feeds to recreate original trading layouts of wrecked wooden merchant vessels.
+651. Deep-Sea Facts Tutor: Explaining deep-ocean life and environments in accessible terms.
+652. Shipwreck History Guide: Sharing accurate, respectful stories and lessons from famous shipwrecks.
+653. Marine Archeology Ethics Guide: Teaching why artifacts should stay in context and with communities.
+654. Sonar & Mapping Explainer: Explaining how sonar maps the ocean floor, accessibly.
+655. Treasure Hunting Reality Check: Providing honest context on underwater treasure claims and law.
+656. Deep-Sea Careers Pathfinder: Mapping careers in marine science, submersibles, and ocean tech.
+657. Ocean Plastic Decoder: Explaining ocean plastic issues and what individuals can realistically do.
+658. Marine Sanctuary Visitor Guide: Teaching respectful visitation of protected marine areas.
+659. Submersible Science Explainer: Explaining how deep-sea vehicles work and what they discover.
+660. Ocean Museum Exhibit Planner: Helping educators design engaging deep-ocean exhibits.
+Advanced Aviation, Hypersonics & Runway Engineering
+651. Hypersonic Flight Boundary Layer Turbulence Dampers: Real-time fuselage surface adjustments to stop friction air layouts from ripping supersonic craft apart.
+652. Aircraft Cockpit Voice Recorder Stress Tone Classifiers: Analyzing pilot vocal pitch changes during crises to automatically deploy flight-assist overrides.
+653. Airport Runway Micro-Fissure Laser Scanner Sweeps: Processing high-speed ground vehicle cameras to find concrete splits before tires blow on takeoff.
+654. Jet Engine Fan Blade Metal Fatigue Acoustic Evaluators: Processing ultrasonic sound waves through spinning blades to locate microscopic internal crystal fractures.
+655. Air Cargo Pallet Center-of-Gravity Balance Adjusters: Running spatial mass calculations to automatically position heavy cargo inside cargo aircraft.
+656. High-Altitude Weather Balloon Path Steering Prediction Systems: Modeling upper-stratosphere wind vectors to time ballast drops and maintain communication locations.
+657. Airport De-Icing Chemical Runoff Toxicity Schedulers: Adjusting airport surface chemical spray volumes dynamically based on runway freezing speeds and local stream logs.
+658. Aircraft Cabin Air Recirculation Germ Trajectory Filters: Modeling airflow sweeps inside passenger planes to focus filter intake cycles over sneezing areas.
+659. Drone Rocket Booster Return Landing Burn Trajectories: Real-time thruster angle adjustments to land orbital rocket parts safely onto rolling sea ships.
+660. Airport Jetway Docking Laser Alignment Tracking Systems: Guiding mechanical passenger boarding bridges to plane doors down to the millimeter without hull scratches.
+661. Pilot Basics Tutor: Explaining how flight works and what pilots manage, accessibly.
+662. Runway & Airport Explainer: Explaining runway numbering, signs, and airport operations.
+663. Flight Booking Optimization Guide: Helping travelers find better flight options, connections, and value.
+664. Aviation Careers Pathfinder: Mapping realistic careers across aviation, from pilot to logistics.
+665. Aircraft Types Decoder: Helping travelers understand aircraft types and cabin differences.
+666. Frequent Flyer Program Guide: Teaching people to get real value from frequent flyer programs.
+667. Flight Etiquette & Rules Guide: Teaching courteous, safe behavior and rules when flying.
+668. Aviation History Tour Planner: Designing educational visits to aviation museums and airshows.
+669. Pilot Training Prerequisites Guide: Explaining the steps, costs, and requirements to start flight training.
+670. Air Travel with Kids Planner: Planning smooth air travel with children at every age.
+Micro-Climate Geo-Engineering & Crop Protection
+661. Cloud Seeding Silver Iodide Trajectory Particle Planners: Processing radar wind maps to drop rain-making particles precisely over burning forest zones.
+662. Vineyard Frost Mitigation Air Fan Trigger Engines: Correlating local soil and air inversion data to spin protective wind machines right before grapes freeze.
+663. Urban Skyscraper Wind Canyon Eddy Dispersal Screens: Designing architectural building panels that break up dangerous wind surges on city street pavements.
+664. Desert Greenification Subsurface Drip Water Formulation Schedulers: Matching desert heat forecasts with soil sand ratios to grow trees using minimal clean water.
+665. Greenhouse Hydroponic Transpiration Leaf Humidity Adjusters: Real-time micro-tweaks of fan speeds based on automated plant leaf sweat infrared scans.
+666. Mountain Highway Avalanche Snowpack Kinetic Alarms: Tracking high-frequency snow vibration data to trigger protective explosive cannons before major road blockages.
+667. Urban Rooftop Solar Array Albedo Reflection Shields: Modeling light reflection angles around mirror buildings to stop focused beams from burning city streets.
+668. Orchard Hail Defense Shockwave Cannon Fire Timers: Processing Doppler radar cloud density layers to shoot sonic columns that shatter ice balls into rain.
+669. Coastal Sand Dune Grass Growth Spatial Allocators: Processing drone elevation scans to pinpoint where planting beach grasses will stop coastal erosions.
+670. Arid Zone Fog-Harvesting Mesh Surface Vector Layouts: Modeling wind path movements across mountain ridges to place maximum water-catching mesh nets.
+671. Rooftop Garden Planner: Designing productive, safe rooftop gardens for urban homes.
+672. Backyard Microclimate Designer: Designing a yard's microclimate — shade, wind, and warmth — for plants.
+673. Frost Protection for Gardens Guide: Teaching practical ways to protect plants from frost.
+674. Heatwave Plant Care Guide: Helping gardeners protect plants through heatwaves and droughts.
+675. Pollinator Garden Planner: Designing gardens that support bees, butterflies, and local wildlife.
+676. Shade Net & Cover Advisor: Helping gardeners choose covers and nets to protect plants.
+677. Urban Heat Awareness Guide: Helping households reduce heat around their home and neighborhood.
+678. Greenhouse Starter Guide: Planning a practical backyard greenhouse for year-round growing.
+679. Companion Planting Guide: Teaching which plants help each other grow and deter pests.
+680. Micro-Greens Home Grower: Guiding beginners to grow micro-greens indoors successfully.
+Advanced Vehicle Dynamics, Rail & Track Infrastructure
+671. High-Speed Bullet Train Wheel Flat-Spot Acoustic Diagnostics: Processing trackside audio logs to isolate the clicking sounds of damaged train wheels instantly.
+672. Subway Underground Tunnel Concrete Water Leak Spotters: Scanning mobile camera car imagery to find structural tunnel leaks before electrical short circuits halt tracks.
+673. Autonomous Electric Truck Highway Drafting Slipstream Schedulers: Grouping moving logistics trucks down to the foot to save heavy battery power via air drafting.
+674. Railroad Track Expansion Heat Buckling Warning Models: Correlating steel track temperatures with solar metrics to slow down trains before tracks bend.
+675. Smart Car Suspensions Active Pothole Damage Absorbers: Processing forward-facing car camera feeds to prep wheel shocks a millisecond before hitting a hole.
+676. Ship Canal Lock Squeeze Clearance Laser Alignment Systems: Guiding mega cargo ships through tight canal concrete locks safely to stop hull tearing.
+677. Formula-1 Race Car Tire Thermal Breakdown Live Projectors: Processing wheel camera feeds to tell pit crews the exact second tire treads lose race track grip.
+678. Electric Delivery Van Regenerative Brake Capture Optimizers: Readjusting battery charging levels live based on urban traffic lights and terrain hills.
+679. Freight Train Coupling Shock Wave Stress Accumulation Models: Processing link sensor data across 100 cargo cars to flag metal couplers about to break.
+680. Urban Tram Line Track Debris Optical Jet Cleaners: Activating high-pressure trackside air jets right as debris or leaves block tram wheel connections.
+681. Driving Efficiency Coach: Teaching smooth-driving habits that save fuel and reduce wear.
+682. Rail Travel Planner: Planning train journeys — tickets, connections, and comfort.
+683. Vehicle Sway & Control Basics: Explaining how cars handle, brake, and stay stable.
+684. Rail Safety Awareness Guide: Teaching safe behavior around tracks, crossings, and platforms.
+685. Trailer Towing Basics Guide: Teaching safe towing practices, weights, and setup.
+686. Car Suspension Basics Tutor: Explaining what suspension does and when it needs attention.
+687. Train Etiquette & Rules Guide: Teaching courteous, safe behavior on trains and platforms.
+688. EV Range Realism Guide: Helping EV drivers plan around real-world range and conditions.
+689. Road Trip Vehicle Prep Guide: Preparing a vehicle for a long road trip safely.
+690. Public Transit Navigation Coach: Helping people master buses, trains, and transfers in their city.
+Specialist Medical Devices, Exoskeletons & Prosthetics
+681. Robotic Exoskeleton Joint Torque Biomotion Syncers: Adjusting mechanical leg motor responses live to match a paralyzed patient's upper-body leaning speeds.
+682. Myoelectric Arm Prosthetic Nerve Impulse Trajectory Filters: Reading tiny muscle twitch signals on amputee limbs to execute smooth hand finger grips.
+683. Smart Insulin Pump Glucose Crash Basal Interrupters: Processing continuous under-skin sensors to halt hormone pumps before patients fall into low-blood-sugar comas.
+684. Surgical Robot Laser Incision Depth Tissue Profilers: Processing light reflection lines to stop medical lasers the micron they pass through skin layers.
+685. Cardiology Pacemaker Heart Rate Arrhythmia Defibrillation Optimizers: Customizing electronic pacing signals based on individual scar tissue shapes from patient hearts.
+686. Blind Navigation Haptic Smart Vest Ultrasonic Array Solvers: Translating camera image objects into varying chest vest vibrations to guide blind walkers safely.
+687. Burn Patient Hyperbaric Oxygen Therapy Skin Growth Tracking: Processing microscopic skin scans to adjust chamber gas mixtures and speed up scar healings.
+688. Epileptic Seizure Brainwave Waveform Detection Alarms: Scanning continuous under-scalp brain grids to warn patients minutes before a seizure starts.
+689. Orthotic Insole Dynamic Gate Shock-Absorption Adjusters: Modeling foot pressure variations inside smart shoes to tune flexible sole inserts for walking balance.
+690. Intensive Care Ventilator Lung Compliance Pressure Balancers: Real-time adjustments of breathing pump air pressures based on changing lung stiffening data.
+691. Wearable Health Device Guide: Helping people choose and use fitness and health wearables wisely.
+692. CPAP & Sleep Device Setup Guide: Guiding users through comfortable, effective use of sleep devices.
+693. Hearing Aid Selection Guide: Helping people understand hearing aid options and fitting.
+694. Blood Pressure Monitor Guide: Teaching correct home blood-pressure monitoring technique.
+695. Glucose Monitor Basics Guide: Explaining home glucose monitoring and its use.
+696. Assistive Device Advisor: Helping people choose mobility aids that fit their daily life.
+697. Orthotics & Insoles Guide: Helping people understand and choose foot orthotics sensibly.
+698. Medical Device Recycling Guide: Guiding safe, responsible disposal of old medical devices.
+699. Wearable Data Literacy Tutor: Teaching people to interpret wearable health data responsibly.
+700. Accessible Technology Finder: Helping people find assistive tech that improves daily independence.
+High-Value Space Science, Quantum Sensing & Astrochemistry
+691. Astrobiology Martian Soil Drilling Biomarker Sorters: Processing mass spectrometer light sweeps on rovers to find trace fossil molecules from ancient alien life.
+692. Quantum Gravity Gradiometer Subsurface Oil Dome Trackers: Processing atom-interference metrics to locate hidden oil reserves deep underground without sound booms.
+693. Space Telescope Mirror Cold Thermal Actuator Alignment Systems: Adjusting sub-micron mirror back plates as space craft shadows drop to near-absolute zero temperatures.
+694. Lunar Base Regolith Microwave Sintering Structural Models: Modeling heat dispersal patterns to bake moon dirt into durable concrete living domes for astronauts.
+695. Solar Wind Plasma Bow Shock Spacecraft Shield Monitors: Tracking electromagnetic shield sensors to steer orbital assets away from solar proton bursts.
+696. Quantum Cryogenic Atomic Clock Drift Correction Systems: Micro-tuning microwave pulse arrays to keep global satellite clocks accurate down to the picosecond.
+697. Exoplanet Transit Light Curve Stellar Flare Filters: Stripping random star spot noise from telescope data to verify the size of planets crossing distant stars.
+698. Space Station Closed-Loop Water Purifier Micro-Bio Checks: Continuous optical monitoring of recycling water lines to catch bacterial cell spikes instantly in space.
+699. Rocket Engine Combustion Chamber Acoustic Vibration Balancers: Modulating fuel injection line speeds to stop high-frequency acoustic shocks from exploding rocket bells.
+700. Asteroid Core Mineral Mass Hyperspectral Specimen Analyzers: Processing light spectrum reflections from flying space rocks to identify iron, platinum, or water ice mining assets.
+701. Stargazing Starter Guide: Helping beginners get started observing the night sky.
+702. Astronomy Apps & Gear Advisor: Helping people choose astronomy apps, binoculars, and telescopes.
+703. Satellite Spotter Guide: Teaching people to spot satellites, ISS, and launches.
+704. Meteor Shower Planner: Planning the best ways to watch meteor showers.
+705. Astro Photography Basics: Teaching accessible night-sky photography with simple gear.
+706. Space News Fact-Checker: Helping people evaluate space news and claims critically.
+707. Planet & Constellation Tutor: Teaching identification of planets and constellations season by season.
+708. Space Careers Pathfinder: Mapping realistic careers in space, astronomy, and STEM.
+709. Aurora Viewing Guide: Planning and catching aurora displays at home or abroad.
+710. Amateur Astronomy Community Guide: Helping beginners join astronomy clubs and citizen science.
+

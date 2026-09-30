@@ -1,0 +1,135 @@
+---
+/**
+ * /catalog/[category]/[subcategory]/ — one skill collection page.
+ * This is where "actual purchases will occur": products from the CSV that
+ * belong to this subcategory are listed; empty collections get a clear,
+ * conversational request pathway instead of a dead end.
+ * 1100+ of these pages are statically generated from the taxonomy + CSV.
+ */
+import BaseLayout from '../../../components/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import JsonLd from '../../../components/JsonLd.astro';
+import { SITE } from '../../../config/site.mjs';
+import {
+  collections,
+  getProductsBySubcategory,
+  getSubcategoryByIdentity,
+} from '../../../lib/catalog.ts';
+import type { TaxonomyCategory, TaxonomySub } from '../../../lib/catalog.ts';
+
+export function getStaticPaths() {
+  return collections.flatMap((coll) =>
+    coll.categories.flatMap((cat: TaxonomyCategory) =>
+      cat.subcategories.map((sub: TaxonomySub) => ({
+        params: { category: cat.key, subcategory: sub.key },
+        props: { category: cat, subcategory: sub },
+      }))
+    )
+  );
+}
+
+interface Props {
+  category: TaxonomyCategory;
+  subcategory: TaxonomySub;
+}
+const { category, subcategory } = Astro.props;
+const products = getProductsBySubcategory(subcategory.key);
+const siblings = category.subcategories.filter((s) => s.key !== subcategory.key);
+const stockedSiblings = siblings.filter((s) => getProductsBySubcategory(s.key).length > 0).slice(0, 4);
+const crate = getSubcategoryByIdentity(category.key, subcategory.key);
+const path = `/catalog/${category.key}/${subcategory.key}/`;
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Catalog', href: '/catalog/' },
+  { label: category.title, href: `/catalog/${category.key}/` },
+  { label: subcategory.title },
+];
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'Catalog', item: `${SITE.url}/catalog/` },
+    { '@type': 'ListItem', position: 3, name: category.title, item: `${SITE.url}/catalog/${category.key}/` },
+    { '@type': 'ListItem', position: 4, name: subcategory.title, item: `${SITE.url}${path}` },
+  ],
+};
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: subcategory.title,
+  itemListElement: products.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: p.name,
+    url: `${SITE.url}/products/${p.slug}/`,
+    image: p.image ? `${SITE.url}/${p.image}` : undefined,
+  })),
+};
+const metaDescription =
+  products.length > 0
+    ? `${subcategory.title} — ${products.length} ready-to-use ${products.length === 1 ? 'AI skill pack' : 'AI skill packs'} available. ${subcategory.summary}`
+    : `${subcategory.title} — AI skill packs coming soon. ${subcategory.summary} Request a custom version if you need it sooner.`;
+const countLabel = products.length > 0 ? `${products.length} ${products.length === 1 ? 'product' : 'products'} in this collection` : 'Collection not yet stocked';
+---
+<BaseLayout title={subcategory.title} description={metaDescription} canonical={path}>
+  <JsonLd data={[breadcrumbLd, itemListLd]} />
+  <section class="border-b border-line bg-surface">
+    <div class="container-x py-12">
+      <Breadcrumbs items={breadcrumbs} />
+      <div class="mt-6 max-w-3xl">
+        <p class="eyebrow">{category.title}</p>
+        <h1 class="mt-3 font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">{subcategory.title}</h1>
+        {subcategory.summary && <p class="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg">{subcategory.summary}</p>}
+        <p class="mt-5 inline-flex items-center gap-2 rounded-md border border-line bg-paper px-3 py-1.5 text-sm text-ink-soft">
+          <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true" class="text-brand"><rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          {countLabel}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-12 sm:py-16">
+    {products.length > 0 ? (
+      <>
+        <p class="mb-6 text-sm text-ink-faint">Buy once — check out securely with Payhip, get instant delivery in your inbox.</p>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {products.map((p) => <ProductCard product={p} />)}
+        </div>
+      </>
+    ) : (
+      <div class="grid gap-8 lg:grid-cols-[1.4fr_0.6fr]">
+        <div class="card flex flex-col items-start p-8 sm:p-10">
+          <p class="eyebrow">Not stocked yet</p>
+          <h2 class="mt-3 font-display text-2xl font-bold tracking-tight">“{subcategory.title}” isn’t available yet</h2>
+          <p class="mt-3 max-w-xl text-sm leading-relaxed text-ink-soft sm:text-base">
+            This collection is on our roadmap and will be stocked as products become ready.
+            {crate.subcategory?.summary ? ` In the meantime, here’s what it covers: “${crate.subcategory.summary}”` : ''}
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href={`/request/?q=${encodeURIComponent(subcategory.title)}&source=collection`} class="btn-primary">Request this skill →</a>
+            <a href={`/catalog/${category.key}/`} class="btn-outline">Back to {category.title}</a>
+          </div>
+          <p class="mt-4 text-xs text-ink-faint">
+            When a product is added to this collection in the catalog CSV, it appears here automatically — no page edits needed.
+          </p>
+        </div>
+        {stockedSiblings.length > 0 && (
+          <aside class="rounded-md border border-line bg-surface p-6">
+            <h2 class="font-display text-base font-bold tracking-tight">Stocked collections nearby</h2>
+            <ul class="mt-4 space-y-3 text-sm">
+              {stockedSiblings.map((s) => (
+                <li>
+                  <a href={`/catalog/${category.key}/${s.key}/`} class="rounded-sm font-semibold text-brand transition-colors hover:text-brand-deep">{s.title}</a>
+                  <p class="line-clamp-1 text-ink-faint">{getProductsBySubcategory(s.key)[0]?.name}</p>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
+      </div>
+    )}
+  </section>
+</BaseLayout>

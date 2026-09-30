@@ -1,0 +1,94 @@
+---
+/**
+ * /about/ — what Prompt Station is, what an "AI skill" is, and how we work.
+ */
+import BaseLayout from '../../components/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { SERVICE, SITE } from '../../config/site.mjs';
+import { taxonomy } from '../../lib/catalog.ts';
+
+const stats = taxonomy.stats ?? {};
+const org = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: `About ${SITE.name}`,
+  url: `${SITE.url}/about/`,
+  mainEntity: { '@type': 'Organization', name: SITE.name, description: SITE.description },
+};
+---
+<BaseLayout
+  title="About"
+  description={`What ${SITE.name} is: a marketplace for AI skills that do structural work and produce high quality output from AI, across ${stats.categories ?? 0}+ categories.`}
+  canonical="/about/"
+>
+  <JsonLd data={org} />
+  <section class="border-b border-line bg-surface">
+    <div class="container-x py-12 sm:py-16">
+      <p class="eyebrow">About</p>
+      <h1 class="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+        {SITE.name} is a marketplace for AI skills — not generic prompts
+      </h1>
+      <p class="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg">{SITE.description}</p>
+    </div>
+  </section>
+
+  <section class="container-x grid gap-12 py-12 sm:py-16 lg:grid-cols-2">
+    <div class="space-y-5 text-base leading-relaxed text-ink-soft">
+      <h2 class="font-display text-xl font-bold tracking-tight text-ink">What is an “AI skill”?</h2>
+      <p>
+        An AI skill is a structured capability you hand to an AI assistant: clear instructions for its behavior,
+        the topics it should master, the format of its output, and the quality checks that keep that output useful.
+      </p>
+      <p>
+        A generic prompt gives you a paragraph. A skill gives you a repeatable result — the same way a trained human
+        specialist produces consistent, high-quality work. That’s the difference this store is built around.
+      </p>
+    </div>
+    <div class="space-y-5 text-base leading-relaxed text-ink-soft">
+      <h2 class="font-display text-xl font-bold tracking-tight text-ink">Built for structural work & real workflow impact</h2>
+      <p>
+        Every product is scoped to a real job: writing sales pages, auditing data, running customer support, drafting
+        engineering documents, analyzing research — {stats.subcategories ?? 1100}+ skill niches in total, organized for
+        discovery rather than dumped into one endless list.
+      </p>
+      <p>
+        The storefront is data-driven: new products, subcategories and whole categories appear simply by adding rows to
+        the product catalog — which is why the catalog can keep growing without the site being rebuilt.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-y border-line bg-surface">
+    <div class="container-x py-12 sm:py-16">
+      <SectionHeading eyebrow="How we work" title="Transparent by design" center />
+      <div class="mx-auto mt-10 grid max-w-4xl gap-6 sm:grid-cols-3">
+        {[
+          { t: 'Honest listings', b: 'Each product page states what the pack contains, what it works with, and how delivery happens — no inflated claims.' },
+          { t: 'Secure by separation', b: 'Payments run on Payhip (Stripe & PayPal). Paid files never sit in public site assets, and the site never pretends to verify purchases client-side.' },
+          { t: 'Built to grow', b: 'The catalog is a spreadsheet. Adding a product, collection or category is a data change — the site generates the pages itself.' },
+        ].map((v) => (
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-bold tracking-tight">{v.t}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">{v.b}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-12 sm:py-16">
+    <div class="card bg-ink px-6 py-10 text-paper sm:px-12">
+      <div class="grid items-center gap-8 lg:grid-cols-[1.3fr_0.7fr]">
+        <div>
+          <h2 class="font-display text-2xl font-bold tracking-tight sm:text-3xl">{SERVICE.headline}</h2>
+          <p class="mt-3 max-w-xl text-sm leading-relaxed text-paper/70 sm:text-base">{SERVICE.intro}</p>
+        </div>
+        <div class="flex flex-wrap gap-3 lg:justify-end">
+          <a href="/request/" class="btn-primary px-6 py-3">Start a request</a>
+          <a href="/catalog/" class="inline-flex items-center justify-center rounded-md border border-paper/30 px-6 py-3 text-sm font-semibold text-paper transition hover:border-paper/60">Browse the catalog</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

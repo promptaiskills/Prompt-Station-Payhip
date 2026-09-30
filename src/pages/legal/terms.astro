@@ -1,0 +1,59 @@
+---
+/**
+ * /legal/terms/ — terms of service TEMPLATE.
+ * ⚠️ REVIEW BEFORE LAUNCH: replace [YOUR ...] placeholders and confirm the
+ * wording with professional advice before going live.
+ */
+import BaseLayout from '../../components/BaseLayout.astro';
+import { SITE } from '../../config/site.mjs';
+
+const email = SITE.contact.email && !/YOUR_/.test(SITE.contact.email) ? SITE.contact.email : '[YOUR_EMAIL]';
+---
+<BaseLayout title="Terms of service" description={`Terms of service for ${SITE.name}.`} canonical="/legal/terms/">
+  <section class="container-x py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl">
+      
+      <h1 class="mt-6 font-display text-3xl font-bold tracking-tight">Terms of service</h1>
+      <p class="mt-2 text-sm text-ink-faint">Last updated: 24th September 2026</p>
+
+      <div class="mt-8 space-y-6 text-sm leading-relaxed text-ink-soft">
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">1. The service</h2>
+          <p>{SITE.name} sells digital, downloadable AI skill packs. Products are fulfilled by Payhip, a third-party platform that processes payment and delivers files.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">2. Purchases & payment</h2>
+          <p>Payments are processed by Payhip under <em>Payhip’s terms and privacy policy</em>. Purchase confirmation, payment handling and file delivery occur on Payhip’s infrastructure. Currency, prices and product availability are shown on the site at the time of purchase.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">3. License to use content</h2>
+          <p>Each purchased pack is licensed for the buyer’s own professional use. Redistribution of paid product files is prohibited.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">4. Digital delivery</h2>
+          <p>Delivery is instant: Payhip emails a receipt with a secure download page link. If you do not receive it, check spam, then contact us at {email} and we will re-send your download link.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">5. Refunds</h2>
+          <p>Digital goods are non-returnable once delivered, but we handle problems fairly: contact {email} and we will work with Payhip’s refund process on a case-by-case basis.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">6. Acceptable use</h2>
+          <p>Do not: attempt to bypass payment or file security, resell the raw files, or use products for illegal activity. The site may suspend access for abuse.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">7. Disclaimers</h2>
+          <p>Products are provided “as is” without warranties of merchantability or fitness for a particular purpose. Output produced using AI tools remains the user’s responsibility: verify important outputs before use, especially in regulated fields.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">8. Limitation of liability</h2>
+          <p>To the maximum extent permitted by law, {SITE.name} is not liable for indirect or consequential damages arising from use of the site or its products.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">9. Contact</h2>
+          <p>{email}</p>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

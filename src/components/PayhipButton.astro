@@ -1,0 +1,86 @@
+---
+/**
+ * PayhipButton — the secure checkout trigger.
+ *
+ * Renders an <a> pointing at the product's Payhip page. The purchase dialog
+ * (src/scripts/buy.ts) intercepts the click, confirms product + price, and
+ * hands off to Payhip's hosted checkout (direct checkout link, opened in a
+ * new tab). With JavaScript disabled, the same link simply takes the customer
+ * to the Payhip product page — graceful degradation, no extra code paths.
+ *
+ * Props are published on `data-ps` for the purchase dialog (buy.ts).
+ */
+import { formatPrice } from '../lib/format.mjs';
+import { PAYHIP } from '../config/site.mjs';
+
+export interface BuyPayload {
+  name: string;
+  price: number;
+  currency: string;
+  compareAt: number | null;
+  url: string;      // Payhip product page
+  checkout: string; // Payhip direct checkout (/buy?link=KEY)
+  slug: string;
+  format: string;
+}
+
+interface Props {
+  product: {
+    name: string;
+    price: number;
+    currency: string;
+    compareAtPrice: number | null;
+    payhipUrl: string;
+    payhipCheckoutUrl?: string;
+    slug: string;
+    fileFormat: string;
+  };
+  label?: string;
+  variant?: 'primary' | 'dark' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
+}
+
+const { product, label, variant = 'primary', size = 'md' } = Astro.props;
+const price = formatPrice(product.price, product.currency);
+const sizes = { sm: 'px-3 py-1.5 text-sm', md: 'px-4 py-2.5 text-sm', lg: 'px-6 py-3.5 text-base' };
+const variants = {
+  primary: 'bg-brand text-white hover:bg-brand-deep',
+  dark: 'bg-ink text-paper hover:bg-ink-soft',
+  outline: 'border border-line-strong bg-surface text-ink hover:border-ink',
+};
+const checkoutUrl = product.payhipCheckoutUrl || PAYHIP.checkoutUrlFor(product.payhipUrl);
+const payload: BuyPayload = {
+  name: product.name,
+  price: product.price,
+  currency: product.currency,
+  compareAt: product.compareAtPrice,
+  url: product.payhipUrl,
+  checkout: checkoutUrl,
+  slug: product.slug,
+  format: product.fileFormat,
+};
+const rel = product.payhipUrl.startsWith('/') ? undefined : 'noopener';
+---
+{
+  product.payhipUrl ? (
+    <a
+      href={checkoutUrl}
+      rel={rel}
+      target="_blank"
+      class:list={[
+        'payhip-button inline-flex items-center justify-center gap-2 rounded-md font-semibold transition-colors',
+        sizes[size],
+        variants[variant],
+        Astro.props.class,
+      ]}
+      data-ps={JSON.stringify(payload)}
+    >
+      {label ?? `Buy now — ${price}`}
+    </a>
+  ) : (
+    <span class:list={['inline-flex items-center gap-2 rounded-md bg-ink/5 px-4 py-2.5 text-sm font-semibold text-ink-faint', sizes[size]]}>
+      Coming soon
+    </span>
+  )
+}

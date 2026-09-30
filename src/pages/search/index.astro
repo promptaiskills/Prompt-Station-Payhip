@@ -1,0 +1,92 @@
+---
+/**
+ * /search/ — client-enhanced product search.
+ * Initial results are rendered server-side (works with JS disabled); the
+ * search.ts script upgrades it to live filtering over the catalog index and
+ * adds the conversational empty state when nothing matches.
+ */
+import BaseLayout from '../../components/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { getProducts, getSearchIndex } from '../../lib/catalog.ts';
+
+const rawQ = Astro.url.searchParams.get('q') ?? '';
+const q = rawQ.trim();
+const searchIndexJson = JSON.stringify(getSearchIndex()).replace(/</g, '\\u003c');
+const matched = q
+  ? getProducts().filter((p) => {
+      const hay = `${p.name} ${p.shortDescription} ${p.categoryTitle} ${p.subcategoryTitle} ${p.tags.join(' ')}`.toLowerCase();
+      return q.toLowerCase().split(/\s+/).every((token) => hay.includes(token));
+    })
+  : [];
+const popular = getProducts().filter((p) => p.featured).slice(0, 4);
+---
+<BaseLayout title={q ? `Search: ${q}` : 'Search all AI skills'} description="Search the full Prompt Station catalog — match product titles, descriptions, categories, collections and tags." canonical="/search/">
+  <section class="border-b border-line bg-surface">
+    <div class="container-x py-12">
+      <h1 class="font-display text-3xl font-bold tracking-tight">Search the catalog</h1>
+      <form action="/search/" method="get" role="search" class="mt-6 flex max-w-2xl gap-3">
+        <label for="search-page-input" class="is-sr-only">Search products</label>
+        <input
+          id="search-page-input"
+          type="search"
+          name="q"
+          value={q}
+          placeholder="e.g. copywriting, chatbots, web design…"
+          autocomplete="off"
+          data-search-input
+          class="field-input flex-1 text-base"
+        />
+        <button type="submit" class="btn-primary shrink-0">Search</button>
+      </form>
+      <p class="mt-3 text-xs text-ink-faint" data-count>
+        {q !== '' && matched.length > 0 ? `${matched.length} result${matched.length === 1 ? '' : 's'} for “${q}”` : q !== '' ? `No matches for “${q}”` : ''}
+      </p>
+    </div>
+  </section>
+
+  <section class="container-x py-10 sm:py-14">
+    <div id="search-results" data-results>
+      {q !== '' && (
+        <div class="mb-6">
+          <h2 class="font-display text-xl font-bold tracking-tight">Results for “{q}”</h2>
+          <p class="mt-1 text-sm text-ink-faint">
+            {matched.length > 0 ? `${matched.length} match${matched.length === 1 ? '' : 'es'} found across the catalog` : 'Nothing found — try a different term, or browse the catalog below.'}
+          </p>
+        </div>
+      )}
+
+      {q === '' && (
+        <div class="max-w-xl">
+          <h2 class="font-display text-xl font-bold tracking-tight">Try searching for</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            {popular.map((p) => (
+              <li><a href={`/search/?q=${encodeURIComponent(p.subcategoryTitle)}`} class="font-semibold text-brand underline-offset-2 hover:underline">{p.subcategoryTitle}</a></li>
+            ))}
+            <li><a href="/catalog/" class="font-semibold text-brand underline-offset-2 hover:underline">…or browse the full catalog</a></li>
+          </ul>
+        </div>
+      )}
+
+      {q !== '' && matched.length > 0 && (
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {matched.map((p) => <ProductCard product={p} />)}
+        </div>
+      )}
+
+      {q !== '' && matched.length === 0 && (
+        <div class="card max-w-xl p-8">
+          <h2 class="font-display text-xl font-bold tracking-tight">No matches for “{q}”</h2>
+          <p class="mt-2 text-sm text-ink-soft">We don’t have that product yet — but we may be able to create it for you.</p>
+          <a href={`/request/?q=${encodeURIComponent(q)}&source=search`} class="btn-primary mt-5 inline-flex">Request it — we may build it</a>
+        </div>
+      )}
+
+      <div id="empty-request" data-empty hidden></div>
+    </div>
+  </section>
+
+  <script>
+    import '../../scripts/search.ts';
+  </script>
+  <script type="application/json" id="search-index-data" set:html={searchIndexJson} />
+</BaseLayout>

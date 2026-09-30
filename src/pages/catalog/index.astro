@@ -1,0 +1,116 @@
+---
+/**
+ * /catalog/ — the full catalog index.
+ * Data-driven browse: every collection (source TXT library) with its
+ * categories, subcategory counts and live product counts.
+ */
+import BaseLayout from '../../components/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { SITE } from '../../config/site.mjs';
+import { collections, getCategoryStats, getSubcategoryStats, getProducts } from '../../lib/catalog.ts';
+
+const totalProducts = getProducts().length;
+const totalSubs = collections.reduce((n, c) => n + c.categories.reduce((m, cat) => m + cat.subcategories.length, 0), 0);
+const collData = collections.map((c) => ({
+  ...c,
+  categoryCount: c.categories.length,
+  productCount: c.categories.reduce((n, cat) => n + getCategoryStats(cat.key).productCount, 0),
+}));
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'Catalog', item: `${SITE.url}/catalog/` },
+  ],
+};
+const activeCollections = collData.filter((c) => c.productCount > 0);
+---
+<BaseLayout
+  title="Catalog — browse all AI skills"
+  description={`Browse ${totalSubs} AI skill collections across ${collections.length} libraries. Buy ready-to-run prompt packs and workflow kits.`}
+  canonical="/catalog/"
+>
+  <JsonLd data={breadcrumbLd} />
+  <section class="border-b border-line bg-surface">
+    <div class="container-x py-14">
+      <SectionHeading
+        as="h1"
+        eyebrow="Catalog"
+        title="Every AI skill niche, in one place"
+        lede={`${totalSubs} skill collections across ${collData.length} libraries — each one a curated, ready-to-buy kit for a specific piece of real work. ${totalProducts} products live now.`}
+        size="lg"
+      />
+    </div>
+  </section>
+
+  <section class="container-x py-12 sm:py-16">
+    {activeCollections.length > 0 && (
+      <div class="mb-12 rounded-md border border-success/25 bg-success-soft px-4 py-3 text-sm text-success">
+        <strong class="font-semibold">{totalProducts} products live</strong>.
+      </div>
+    )}
+
+    {collData.map((coll, ci) => {
+      const empty = coll.productCount === 0;
+      return (
+        <div id={coll.key} class={ci > 0 ? 'mt-14 scroll-mt-24' : 'scroll-mt-24'}>
+          <div class="flex flex-wrap items-end justify-between gap-3">
+            <SectionHeading eyebrow={`Library ${String(ci + 1).padStart(2, '0')}`} title={coll.label} lede={coll.tagline} size="md" />
+            <p class="text-xs text-ink-faint">
+              {coll.categoryCount} categories · {coll.categories.reduce((n, c) => n + c.subcategories.length, 0)} collections ·{' '}
+              <span class="tabular">{coll.productCount} products</span>
+            </p>
+          </div>
+
+          {empty ? (
+            <p class="mt-6 rounded-md border border-dashed border-line-strong bg-paper px-4 py-3 text-sm text-ink-faint">
+              This library’s collection pages will appear here as soon as they’re added.
+              <a href="/request/" class="font-semibold text-brand underline-offset-2 hover:underline"> Request a skill from this library →</a>
+            </p>
+          ) : (
+            <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {coll.categories.map((cat) => {
+                const stats = getCategoryStats(cat.key);
+                const subWithProducts = cat.subcategories
+                  .filter((s) => getSubcategoryStats(s.key) > 0)
+                  .slice(0, 3);
+                return (
+                  <a
+                    href={`/catalog/${cat.key}/`}
+                    class="card card-hover group flex flex-col gap-2 p-5"
+                  >
+                    <span class="flex items-center justify-between text-xs text-ink-faint">
+                      <span class="tabular font-semibold">{stats.productCount} products</span>
+                      <span class="tabular">{cat.subcategories.length} collections</span>
+                    </span>
+                    <span class="font-display text-lg font-bold leading-snug tracking-tight transition-colors group-hover:text-brand">
+                      {cat.title}
+                    </span>
+                    <span class="line-clamp-2 text-sm leading-relaxed text-ink-soft">{cat.description}</span>
+                    {subWithProducts.length > 0 && (
+                      <span class="mt-2 flex flex-wrap gap-1.5">
+                        {subWithProducts.map((s) => (
+                          <span class="badge">{s.title}</span>
+                        ))}
+                      </span>
+                    )}
+                  </a>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      );
+    })}
+
+    <div class="mt-16 flex flex-col items-center gap-4 rounded-md border border-line bg-surface px-6 py-10 text-center sm:flex-row sm:justify-between sm:text-left">
+      <div>
+        <h2 class="font-display text-xl font-bold tracking-tight">Can’t find the skill you need?</h2>
+        <p class="mt-1 text-sm text-ink-soft">Tell us the outcome you want — we may already be able to build it for you.</p>
+      </div>
+      <a href="/request/" class="btn-primary shrink-0">Request a custom skill</a>
+    </div>
+  </section>
+</BaseLayout>

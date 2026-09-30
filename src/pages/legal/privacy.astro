@@ -1,0 +1,58 @@
+---
+/**
+ * /legal/privacy/ — privacy policy TEMPLATE.
+ * ⚠️ REVIEW BEFORE LAUNCH: replace [YOUR ...] placeholders and confirm the
+ * wording with whoever runs the store before going live.
+ */
+import BaseLayout from '../../components/BaseLayout.astro';
+import { SITE } from '../../config/site.mjs';
+
+const email = SITE.contact.email && !/YOUR_/.test(SITE.contact.email) ? SITE.contact.email : '[YOUR_EMAIL]';
+---
+<BaseLayout title="Privacy policy" description={`Privacy policy for ${SITE.name}.`} canonical="/legal/privacy/">
+  <section class="container-x py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl">
+      
+
+      <h1 class="mt-6 font-display text-3xl font-bold tracking-tight">Privacy policy</h1>
+      <p class="mt-2 text-sm text-ink-faint">Last updated: [19th September 2026]</p>
+
+      <div class="mt-8 space-y-6 text-sm leading-relaxed text-ink-soft">
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">1. Who we are</h2>
+          <p>{SITE.name} (the “Store”) is operated at {SITE.url}. Questions about this policy: {email}.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">2. What we collect</h2>
+          <p><strong class="font-semibold text-ink">Contact & request forms.</strong> Name, email and any details you volunteer through the contact or service-request forms. These are stored only to respond to you and fulfil your request.</p>
+          <p><strong class="font-semibold text-ink">Commerce data.</strong> Purchase processing is performed by Payhip (a third-party processor). Payhip collects and handles your payment details, email and purchase record under <em>Payhip’s own privacy policy</em>; the Store never receives or stores card numbers.</p>
+          <p><strong class="font-semibold text-ink">Technical data.</strong> Hosting (Netlify) may log standard request data (IP, user agent, pages). We use this only for security and performance.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">3. How we use your data</h2>
+          <p>To answer your messages, deliver services you request, detect fraud/abuse, and improve the store. We do not sell personal data.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">4. Sharing</h2>
+          <p>We share data only with service providers necessary to run the store: Payhip (payments & delivery), Netlify (hosting & forms).</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">5. Cookies & storage</h2>
+          <p>This site does not set advertising cookies. We may use functional storage only. Payhip may set its own cookies during checkout under Payhip’s cookie policy.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">6. Your rights</h2>
+          <p>Depending on your jurisdiction you may have rights of access, correction, deletion, portability and objection. Contact {email} to exercise them. We respond with effect.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">7. Data retention & security</h2>
+          <p>Form submissions are retained until the related inquiry is resolved. Transmission is encrypted (HTTPS). No system is 100% secure — we follow reasonable industry practices.</p>
+        </section>
+        <section>
+          <h2 class="font-display text-lg font-bold text-ink">8. Changes</h2>
+          <p>We may update this policy; material changes will be announced on the site. Continued use after changes means acceptance</p>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

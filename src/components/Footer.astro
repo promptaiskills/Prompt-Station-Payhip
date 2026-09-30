@@ -1,0 +1,87 @@
+---
+/**
+ * Footer — brand, shop/company/support/legal columns, trust note, socials.
+ */
+import { SITE, PAYHIP } from '../config/site.mjs';
+import { getFeaturedCategories } from '../lib/catalog.ts';
+import Logo from './Logo.astro';
+
+const year = new Date().getFullYear();
+const contactVisible = SITE.contact.email && !/YOUR_/.test(SITE.contact.email);
+const socials = Object.entries(SITE.social).filter(([, v]) => v && !/YOUR_/.test(v));
+const icons: Record<string, string> = {
+  x: 'M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.6 2H8l4.4 5.9z',
+  instagram: 'M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 2.2c-3.1 0-3.5 0-4.7.1-1.1.1-1.5.2-1.9.4-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.4-.3.8-.4 1.9-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.5.4 1.9.2.5.4.8.7 1.1.3.3.6.5 1.1.7.4.1.8.3 1.9.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.5-.2 1.9-.4.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.4.3-.8.4-1.9.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.5-.4-1.9-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.4-.1-.8-.3-1.9-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.7a4.1 4.1 0 110 8.2 4.1 4.1 0 010-8.2zm0 6.8a2.7 2.7 0 100-5.4 2.7 2.7 0 000 5.4zm5.3-6.9a1 1 0 11-2 0 1 1 0 012 0z',
+  linkedin: 'M4.98 3.5a2.49 2.49 0 11-.02 4.98 2.49 2.49 0 01.02-4.98zM3 9.5h4V21H3zM9 9.5h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21H9z',
+  youtube: 'M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.6V8.4L15.8 12z',
+};
+const cats = getFeaturedCategories().filter((c) => c.category);
+---
+<footer class="mt-20 border-t border-line bg-surface">
+  <div class="container-x grid grid-cols-2 gap-10 py-12 md:grid-cols-4 lg:grid-cols-6">
+    <div class="col-span-2">
+      <Logo />
+      <p class="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">{SITE.description}</p>
+      <p class="mt-4 rounded-md border border-line bg-paper px-3 py-2.5 text-xs leading-relaxed text-ink-faint">{SITE.trustNote}</p>
+      {socials.length > 0 && (
+        <ul class="mt-5 flex items-center gap-2" aria-label="Social media">
+          {socials.map(([name, url]) => (
+            <li>
+              <a href={url} target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-md border border-line text-ink-soft transition hover:border-ink hover:text-ink" aria-label={`${SITE.name} on ${name}`}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={icons[name] ?? icons.x} /></svg>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+
+    <nav aria-label="Shop">
+      <h3 class="text-sm font-bold text-ink">Shop</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li><a href="/catalog/" class="rounded-sm text-ink-soft transition-colors hover:text-brand">Full catalog</a></li>
+        {cats.slice(0, 4).map((c) => (
+          <li><a href={`/catalog/${c.category?.key}/`} class="line-clamp-1 rounded-sm text-ink-soft transition-colors hover:text-brand">{c.category?.title}</a></li>
+        ))}
+        <li><a href="/request/" class="rounded-sm text-ink-soft transition-colors hover:text-brand">Request a custom skill</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Company">
+      <h3 class="text-sm font-bold text-ink">Company</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li><a href="/about/" class="rounded-sm text-ink-soft transition-colors hover:text-brand">About Prompt Station</a></li>
+        <li><a href="/how-it-works/" class="rounded-sm text-ink-soft transition-colors hover:text-brand">How it works</a></li>
+        <li><a href="/contact/" class="rounded-sm text-ink-soft transition-colors hover:text-brand">Contact</a></li>
+        {contactVisible && (
+          <li><a href={`mailto:${SITE.contact.email}`} class="rounded-sm break-all text-ink-soft transition-colors hover:text-brand">{SITE.contact.email}</a></li>
+        )}
+      </ul>
+    </nav>
+
+    <nav aria-label="Support">
+      <h3 class="text-sm font-bold text-ink">Support</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li><a href="/how-it-works/#delivery" class="rounded-sm text-ink-soft transition-colors hover:text-brand">Purchasing & delivery</a></li>
+        <li><a href={PAYHIP.purchasesHelpUrl} class="rounded-sm text-ink-soft transition-colors hover:text-brand">Access my purchases</a></li>
+        <li><a href="/request/" class="rounded-sm text-ink-soft transition-colors hover:text-brand">Service requests</a></li>
+        <li><a href="/catalog/" class="rounded-sm text-ink-soft transition-colors hover:text-brand">Browse categories</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Legal">
+      <h3 class="text-sm font-bold text-ink">Legal</h3>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li><a href="/legal/privacy/" class="rounded-sm text-ink-soft transition-colors hover:text-brand">Privacy policy</a></li>
+        <li><a href="/legal/terms/" class="rounded-sm text-ink-soft transition-colors hover:text-brand">Terms of service</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="border-t border-line">
+    <div class="container-x flex flex-col gap-2 py-6 text-xs text-ink-faint sm:flex-row sm:items-center sm:justify-between">
+      <p>© {year} {SITE.name}. All rights reserved.</p>
+      <p>Secure checkout & instant delivery powered by <a href={PAYHIP.storeUrl} target="_blank" rel="noopener" class="rounded-sm underline-offset-2 hover:text-brand hover:underline">Payhip</a>.</p>
+    </div>
+  </div>
+</footer>

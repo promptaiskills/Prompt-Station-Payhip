@@ -1,0 +1,23 @@
+---
+/**
+ * EmptyState — honest, helpful empty states (collections with no products yet).
+ */
+interface Props {
+  title?: string;
+  body?: string;
+  ctaHref?: string;
+  ctaLabel?: string;
+  compact?: boolean;
+}
+const { title = 'Nothing here yet', body = 'We are still stocking this collection.', ctaHref = '/request', ctaLabel = 'Request this skill', compact = false } = Astro.props;
+---
+<div class={`card mx-auto flex max-w-xl flex-col items-center text-center ${compact ? 'p-8' : 'px-6 py-12 sm:px-10'}`}>
+  <span class="flex h-11 w-11 items-center justify-center rounded-md bg-brand-soft text-brand" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="7" /><path d="m20 20-3.2-3.2" /><path d="M8 11h6M11 8v6" />
+    </svg>
+  </span>
+  <h3 class="mt-4 text-lg font-bold tracking-tight">{title}</h3>
+  <p class="mt-2 max-w-md text-sm leading-relaxed text-ink-soft">{body}</p>
+  <a href={ctaHref} class="btn-primary mt-6"> {ctaLabel} →</a>
+</div>

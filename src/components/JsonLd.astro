@@ -1,0 +1,11 @@
+---
+/**
+ * JsonLd — render structured data (JSON-LD) safely.
+ */
+interface Props {
+  data: Record<string, unknown> | Array<Record<string, unknown>>;
+}
+const { data } = Astro.props;
+const json = JSON.stringify(data);
+---
+<script type="application/ld+json" set:html={json} />

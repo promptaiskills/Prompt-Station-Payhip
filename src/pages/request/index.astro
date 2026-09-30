@@ -1,0 +1,212 @@
+---
+/**
+ * /request/ — the conversational service-request experience.
+ * Server-rendered basics (including the "you searched for X" banner from ?q=),
+ * enhanced into a 4-step guided flow by request.ts. Submits to Netlify Forms.
+ */
+import BaseLayout from '../../components/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { SITE, SERVICE } from '../../config/site.mjs';
+
+const q = Astro.url.searchParams.get('q') ?? '';
+const source = Astro.url.searchParams.get('source') ?? '';
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: SERVICE.name,
+  serviceType: 'Custom AI skill design',
+  provider: { '@type': 'Organization', name: SITE.name, url: SITE.url },
+  description: SERVICE.intro,
+  areaServed: 'Worldwide',
+};
+---
+<BaseLayout title="Request a custom AI skill" description={`${SERVICE.name} — ${SERVICE.intro}`} canonical="/request/">
+  <JsonLd data={serviceSchema} />
+  <section class="border-b border-line bg-surface">
+    <div class="container-x py-12 sm:py-16">
+      <p class="eyebrow">{SERVICE.eyebrow}</p>
+      <h1 class="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">{SERVICE.headline}</h1>
+      <p class="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg">{SERVICE.intro}</p>
+      <p class="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">{SERVICE.turnaround}</p>
+    </div>
+  </section>
+
+  <div class="container-x grid gap-12 py-12 sm:py-16 lg:grid-cols-[0.9fr_1.1fr]">
+    <!-- Explain the service -->
+    <aside>
+      <h2 class="font-display text-xl font-bold tracking-tight">Who is this for?</h2>
+      <p class="mt-3 text-sm leading-relaxed text-ink-soft">{SERVICE.audience}</p>
+
+      <h2 class="mt-8 font-display text-xl font-bold tracking-tight">What you can request</h2>
+      <ul class="mt-3 space-y-2.5">
+        {SERVICE.whatYouCanRequest.map((item) => (
+          <li class="flex items-start gap-3 text-sm leading-relaxed text-ink-soft">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true" class="mt-0.5 shrink-0 text-brand">
+              <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.4" /><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+
+      <h2 class="mt-8 font-display text-xl font-bold tracking-tight">What happens after you submit</h2>
+      <ol class="mt-3 space-y-4">
+        {SERVICE.process.map((step, i) => (
+          <li class="flex gap-3">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-brand-soft font-display text-sm font-bold text-brand">{i + 1}</span>
+            <div>
+              <p class="text-sm font-semibold text-ink">{step.title}</p>
+              <p class="mt-0.5 text-sm leading-relaxed text-ink-soft">{step.body}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <p class="mt-6 rounded-md border border-line bg-paper px-4 py-3 text-xs leading-relaxed text-ink-faint">{SERVICE.formNote}</p>
+    </aside>
+
+    <!-- The form -->
+    <div>
+      <div data-search-banner hidden class="mb-6 rounded-md border border-brand/20 bg-brand-soft px-5 py-4 text-sm text-ink-soft">
+        <p>
+          You searched for <strong class="font-semibold text-brand">“<span data-search-banner-text></span>”</strong>.
+          We don’t currently have this product — but we may be able to create it for you.
+        </p>
+        <button type="button" data-dismiss class="mt-2 text-xs font-semibold text-brand underline-offset-2 hover:underline">Dismiss</button>
+      </div>
+
+      <p data-request-progress aria-live="polite" class="eyebrow mb-6"></p>
+
+      <form data-request-form class="card p-6 sm:p-8" name="service-request" method="post"  data-netlify="true" data-netlify-honeypot="hp" novalidate>
+        <input type="hidden" name="form-name" value="service-request" />
+        <input type="hidden" name="source" value={source} />
+        <input type="hidden" name="searched_query" value={q} />
+        <div class="hidden" aria-hidden="true"><input name="hp" type="text" tabindex="-1" autocomplete="off" /></div>
+
+        <fieldset data-step="1" data-label="The skill you need" class="border-0 p-0">
+          <legend class="font-display text-lg font-bold tracking-tight">1 · The skill you need</legend>
+          <p class="mt-1 text-sm text-ink-faint">Give the skill a working title — a few words are enough.</p>
+          <div class="mt-5 space-y-5">
+            <div>
+              <label for="f-product" class="field-label">What skill do you want? <span class="text-danger" aria-hidden="true">*</span></label>
+              <input id="f-product" name="requested_product" required class="field-input" placeholder="e.g. A compliance-report AI skill for our legal team" value={q || ''} />
+            </div>
+            <div>
+              <label for="f-goal" class="field-label">What are you trying to accomplish? <span class="text-danger" aria-hidden="true">*</span></label>
+              <textarea id="f-goal" name="goal" required rows="4" class="field-input" placeholder="Describe the outcome, the task it should handle, and how it should behave."></textarea>
+            </div>
+          </div>
+          <div class="mt-6 flex justify-end">
+            <button type="button" data-next class="btn-primary">Continue →</button>
+          </div>
+        </fieldset>
+
+        <fieldset data-step="2" data-label="Details" class="border-0 p-0">
+          <legend class="font-display text-lg font-bold tracking-tight">2 · Fine-tune the brief</legend>
+          <p class="mt-1 text-sm text-ink-faint">Only fill what you know. Leave the rest blank.</p>
+          <div class="mt-5 space-y-5">
+            <div>
+              <label for="f-topics" class="field-label">Topics & behavior</label>
+              <textarea id="f-topics" name="behavior_topics" rows="3" class="field-input" placeholder="e.g. French marketplace law, formal register, cite sources, follow the agency tone."></textarea>
+            </div>
+            <div>
+              <label for="f-features" class="field-label">Desired features</label>
+              <textarea id="f-features" name="features_needed" rows="3" class="field-input" placeholder="e.g. structured report template, quality checklist, interactive example walks."></textarea>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="f-format" class="field-label">Preferred format</label>
+                <select id="f-format" name="preferred_format" class="field-input">
+                  <option value="not-sure">Not sure yet</option>
+                  <option value="markdown">Markdown</option>
+                  <option value="pdf">PDF</option>
+                  <option value="docx">Word document</option>
+                  <option value="spreadsheet">Spreadsheet</option>
+                  <option value="notion">Notion pack</option>
+                  <option value="tool-specific">Tool-specific pack</option>
+                </select>
+              </div>
+              <div>
+                <label for="f-budget" class="field-label">Budget range</label>
+                <select id="f-budget" name="budget" class="field-input">
+                  <option value="">Prefer not to say</option>
+                  <option value="under-30">Under $30</option>
+                  <option value="30-75">$30 – $75</option>
+                  <option value="75-150">$75 – $150</option>
+                  <option value="150-plus">$150+</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="f-deadline" class="field-label">Deadline (if any)</label>
+              <input id="f-deadline" name="deadline" class="field-input" placeholder="e.g. within two weeks" />
+            </div>
+            <div>
+              <label for="f-reference" class="field-label">Reference or example</label>
+              <input id="f-reference" name="reference" type="url" class="field-input" placeholder="https://… (an example of the output you want)" />
+            </div>
+          </div>
+          <div class="mt-6 flex items-center justify-between">
+            <button type="button" data-back class="btn-ghost">← Back</button>
+            <button type="button" data-next class="btn-primary">Continue →</button>
+          </div>
+        </fieldset>
+
+        <fieldset data-step="3" data-label="Contact" class="border-0 p-0">
+          <legend class="font-display text-lg font-bold tracking-tight">3 · Where should we reply?</legend>
+          <p class="mt-1 text-sm text-ink-faint">We’ll use this only to discuss your request.</p>
+          <div class="mt-5 space-y-5">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="f-name" class="field-label">Your name <span class="text-danger" aria-hidden="true">*</span></label>
+                <input id="f-name" name="name" required class="field-input" autocomplete="name" />
+              </div>
+              <div>
+                <label for="f-email" class="field-label">Email <span class="text-danger" aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" required class="field-input" autocomplete="email" placeholder="you@company.com" />
+              </div>
+            </div>
+            <div>
+              <label for="f-company" class="field-label">Company or team (optional)</label>
+              <input id="f-company" name="company" class="field-input" autocomplete="organization" />
+            </div>
+          </div>
+          <div class="mt-6 flex items-center justify-between">
+            <button type="button" data-back class="btn-ghost">← Back</button>
+            <button type="button" data-next class="btn-primary">Review request →</button>
+          </div>
+        </fieldset>
+
+        <fieldset data-step="4" data-label="Review & send" class="border-0 p-0">
+          <legend class="font-display text-lg font-bold tracking-tight">4 · Review & send</legend>
+          <p class="mt-1 text-sm text-ink-faint">Send it — a human reviews every request.</p>
+          <div class="mt-5 rounded-md border border-line bg-paper p-4 text-sm text-ink-soft">
+            We’ll match the skill brief, contact details and timing above to a proposal. No payment is taken at this stage.
+          </div>
+          <div data-request-error role="alert" class="mt-4 rounded-md border border-danger/30 bg-danger-soft px-4 py-3 text-sm text-danger" hidden></div>
+          <div class="mt-6 flex items-center justify-between">
+            <button type="button" data-back class="btn-ghost">← Back</button>
+            <button type="submit" class="btn-primary">Send request →</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <div data-request-success hidden tabindex="-1" class="card p-8 sm:p-10">
+        <p class="eyebrow">Request received</p>
+        <h2 class="mt-3 font-display text-2xl font-bold tracking-tight">Thank you — we’re on it</h2>
+        <ol class="mt-5 space-y-3 text-sm text-ink-soft">
+          <li class="flex gap-3"><span class="font-display font-bold text-brand">1</span><span>Your brief is in the queue and will be reviewed by a human.</span></li>
+          <li class="flex gap-3"><span class="font-display font-bold text-brand">2</span><span>If we can build it, you’ll get a proposal and timeline by email.</span></li>
+          <li class="flex gap-3"><span class="font-display font-bold text-brand">3</span><span>Nothing to pay now — you only decide after you see the proposal.</span></li>
+        </ol>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="/catalog/" class="btn-primary">Keep browsing the catalog</a>
+          <a href="/" class="btn-outline">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    import '../../scripts/request.ts';
+  </script>
+</BaseLayout>

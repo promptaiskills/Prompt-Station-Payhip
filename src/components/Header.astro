@@ -1,0 +1,115 @@
+---
+/**
+ * Header — utility bar, primary navigation, catalog drop-down, search, CTA.
+ * Data-driven: collections & featured categories come from the taxonomy/config.
+ */
+import { SITE, PAYHIP, SHOP } from '../config/site.mjs';
+import { collections, getCollectionStats, getFeaturedCategories } from '../lib/catalog.ts';
+import Logo from './Logo.astro';
+
+const contactVisible = SITE.contact.email && !/YOUR_/.test(SITE.contact.email);
+const featured = getFeaturedCategories();
+const collStats = collections.map((c) => ({ key: c.key, label: c.label, count: getCollectionStats(c.key).categoryCount }));
+---
+<header>
+  {contactVisible && (
+    <div class="hidden border-b border-line bg-surface sm:block">
+      <div class="container-x flex h-8 items-center justify-between text-xs text-ink-faint">
+        <p>{SITE.tagline}</p>
+        <div class="flex items-center gap-5">
+          <a href={`mailto:${SITE.contact.email}`} class="rounded-sm transition-colors hover:text-brand">{SITE.contact.email}</a>
+          <a href={PAYHIP.purchasesHelpUrl} class="rounded-sm font-medium text-ink-soft transition-colors hover:text-brand">
+            Access my purchases →
+          </a>
+        </div>
+      </div>
+    </div>
+  )}
+
+  <div class="sticky top-0 z-50 border-b border-line bg-surface/95 backdrop-blur">
+    <div class="container-x flex h-16 items-center gap-4">
+      <Logo size="md" />
+
+      <nav class="ml-2 hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <details class="relative" data-catalog-menu>
+          <summary class="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold text-ink transition-colors hover:bg-ink/5">
+            Catalog
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true" class="transition-transform group-open:rotate-180"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="absolute left-0 top-full mt-3 w-[600px] rounded-lg border border-line bg-surface p-6 shadow-lg">
+            <div class="grid grid-cols-2 gap-x-8 gap-y-3">
+              <div>
+                <p class="eyebrow mb-3">Browse by collection</p>
+                <ul class="space-y-2">
+                  {collStats.slice(0, 6).map((c) => (
+                    <li>
+                      <a href={`/catalog#${c.key}`} class="flex items-baseline justify-between gap-3 rounded-sm text-sm text-ink-soft transition-colors hover:text-brand">
+                        <span class="line-clamp-1">{c.label}</span>
+                        <span class="tabular text-xs text-ink-faint">{c.count}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p class="eyebrow mb-3">Popular categories</p>
+                <ul class="space-y-2">
+                  {featured.slice(0, 6).map((c) => (
+                    <li>
+                      <a href={`/catalog/${c.category?.key}/`} class="line-clamp-1 rounded-sm text-sm text-ink-soft transition-colors hover:text-brand">
+                        {c.category?.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <a href="/catalog/" class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-deep">
+              Browse the full catalog <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </details>
+
+        <a href="/how-it-works/" class="rounded-md px-3 py-2 text-sm font-semibold text-ink transition-colors hover:bg-ink/5">How it works</a>
+        <a href="/about/" class="rounded-md px-3 py-2 text-sm font-semibold text-ink transition-colors hover:bg-ink/5">About</a>
+      </nav>
+
+      <div class="ml-auto hidden items-center gap-3 lg:flex">
+        <form action="/search/" method="get" role="search" class="relative">
+          <label for="header-search" class="is-sr-only">Search products</label>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-faint">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8" /><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <input id="header-search" type="search" name="q" placeholder="Search AI skills…" autocomplete="off" class="w-56 rounded-md border border-line-strong bg-paper py-2 pl-9 pr-3 text-sm placeholder:text-ink-faint focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/25" />
+        </form>
+        <a href="/request/" class="btn-dark">Request a skill</a>
+      </div>
+
+      <div class="ml-auto flex items-center gap-1 lg:hidden">
+        <button type="button" data-search-button aria-expanded="false" aria-controls="search-panel" class="rounded-md p-2 text-ink transition hover:bg-ink/5" aria-label="Open search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8" /><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+        </button>
+        <button type="button" data-menu-button aria-expanded="false" aria-controls="mobile-menu" class="rounded-md p-2 text-ink transition hover:bg-ink/5" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="search-panel" data-search-panel hidden class="border-t border-line bg-surface lg:hidden">
+      <form action="/search/" method="get" role="search" class="container-x py-3">
+        <label for="mobile-search" class="is-sr-only">Search products</label>
+        <input id="mobile-search" type="search" name="q" placeholder="Search 1000+ AI skills…" autocomplete="off" class="field-input" />
+      </form>
+    </div>
+
+    <div id="mobile-menu" data-menu-panel hidden class="border-t border-line bg-surface lg:hidden">
+      <nav aria-label="Mobile" class="container-x flex flex-col gap-1 py-3">
+        <a href="/catalog/" class="rounded-md px-3 py-2.5 text-base font-semibold text-ink hover:bg-ink/5">Catalog</a>
+        <a href="/how-it-works/" class="rounded-md px-3 py-2.5 text-base font-semibold text-ink hover:bg-ink/5">How it works</a>
+        <a href="/about/" class="rounded-md px-3 py-2.5 text-base font-semibold text-ink hover:bg-ink/5">About</a>
+        <a href="/request/" class="btn-dark mt-2">Request a skill</a>
+        <a href={contactVisible ? `mailto:${SITE.contact.email}` : '/contact/'} class="rounded-md px-3 py-2.5 text-sm text-ink-soft hover:bg-ink/5">{contactVisible ? 'Contact us' : 'Contact'}</a>
+      </nav>
+    </div>
+  </div>
+</header>

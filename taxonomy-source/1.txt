@@ -1,0 +1,209 @@
+
+
+CONTENT, WRITING & LOCALIZATION
+1. Copywriting: Writing sales pages, ad copy, and landing page text instantly.
+2. SEO Optimization: Analyzing search trends and writing search-friendly articles.
+3. E-Commerce Product Descriptions: Generating unique item descriptions for thousands of online store products.
+4. Email Marketing: Personalizing automated email campaigns for individual buyers.
+5. Resume and Cover Letter Writing: Tailoring job application documents to specific job descriptions.
+6. Transcription and Summaries: Turning long audio or video files into clean text notes.
+7. Technical Documentation: Generating software manuals, API documentations, and engineering guides from source code.
+8. Scriptwriting & Storyboarding: Drafting YouTube video scripts, movie screenplays, and visual storyboards from plot outlines.
+9. Social Media Captioning: Writing daily punchy text posts, hashtags, and threads for corporate networks.
+10. Book & Novel Ghostwriting: Assisting authors with world-building, character generation, and long-form text.
+11. Academic Research & Synthesis: Scanning thousands of peer-reviewed papers to extract and cite relevant data.
+12. Grant & Proposal Writing: Drafting complex funding applications, non-profit grants, and government responses.
+13. Real-Time Subtitling & Dubbing: Generating video captions and syncing translated voice tracks instantly.
+14. AI Writing Copilot Evaluator: Auditioning and selecting the best AI writing assistant for a person's exact tone, genre, and workflow, then tuning reusable style settings for consistent output.
+15. Multi-Audience Tone Shifter: Rewriting a single draft into tailored versions for different audiences, channels, and reading levels while preserving the core message and facts.
+16. Brand Voice Profiler: Analyzing a brand's existing content to extract a detailed voice-and-tone guide that keeps every AI-assisted piece on-voice.
+17. Long-Form Content Architect: Planning comprehensive article, report, and ebook structures with outlines, evidence gaps, and section briefs before any writing begins.
+18. Plain-Language Simplifier: Translating dense, jargon-heavy text into clear, simple language for general readers while preserving technical accuracy.
+19. Multilingual Quality Reviewer: Checking AI translations and localized content for accuracy, naturalness, cultural fit, and consistency against a source text.
+20. Content Fact-Check Workbench: Building a repeatable pipeline to verify claims, quotes, statistics, and sources in drafts before publication.
+21. Accessibility Text Re-writer: Rewriting content to meet accessibility best practices — clear headings, alt-text ideas, simple sentence structure, and readable formatting.
+22. Newsletter Content Curator: Turning raw bookmarks, articles, and notes into a structured, on-brand newsletter issue with a strong subject line and logical flow.
+23. Ghostwriting Style Mimic: Analyzing a client's writing samples to replicate their voice for books, columns, and posts while staying authentic to them.
+24. Localization Context Packager: Building glossaries, style rules, and reference materials that let translators and AI localize products accurately across regions.
+25. Writing Prompt Recipe Builder: Designing reusable, tuned prompts for repeated writing tasks so every generation meets the same quality bar.
+26. Content Repurposing Engine: Converting one long piece into many channel-specific formats — posts, threads, slides, emails, scripts — with consistent messaging.
+DESIGN, MEDIA & ENTERTAINMENT
+14. Web Design: Building full website layouts and code from simple text prompts.
+15. Video Ad Generation: Creating short promotional clips and product videos automatically.
+16. Logo and Brand Design: Generating unique brand symbols, color palettes, and assets.
+17. Stock Image Creation: Producing custom graphics and photographs without a camera.
+18. Voiceover Generation: Turning written text into natural-sounding human voices.
+19. Podcast Editing: Removing background noise and cutting dead air automatically.
+20. Virtual Staging: Adding digital furniture into empty real estate photos.
+21. Game Asset Creation: Designing 3D models and textures for video games.
+22. UI/UX Prototyping: Converting wireframes and user flow ideas into high-fidelity app interfaces.
+23. Fashion & Textile Pattern Design: Creating repeatable fabric prints and conceptual clothing designs.
+24. Architecture & Floor Plan Modeling: Turning 2D blueprint sketches into fully rendered 3D building walk-throughs.
+25. Music & Beat Production: Composing royalty-free background soundtracks and ambient loops for creators.
+26. Special Effects (VFX) & Rotoscoping: Automating green-screen removal and computer-generated visual layering.
+27. Packaging & Label Design: Generating physical product boxes and container templates.
+28. Comic Book & Manga Illustration: Generating panels, line art, and background scenes from text scripts.
+29. 3D Character Rigging & Animation: Automating skeletal movement rigs for digital gaming characters.
+30. Children's Book Illustration: Creating cohesive, whimsical art styles featuring identical character models.
+31. Infographic Design: Converting raw metrics into visually scannable reports and charts.
+32. Photo Restoration & Colorization: Upscaling blurry images and realistically coloring old black-and-white photos.
+33. Sound Design & Foley Effects: Generating environmental soundscapes, footsteps, and cinematic audio effects.
+34. AI Design System Auditor: Reviewing a product's UI for consistency against its design tokens, spacing, and typography rules, then recommending fixes.
+35. Prompt-to-Brand-Kit Generator: Turning a brand description into a complete starter kit — palette, type, logo direction, and usage guidelines.
+36. Image Brief Translator: Converting a vague visual idea into a precise, detailed image-generation prompt and refining drafts iteratively.
+37. Creative Idea Moodboarder: Gathering and arranging reference imagery, color studies, and concept notes to align stakeholders before production.
+38. Video Script Visualizer: Turning a script into shot lists, storyboards, and visual notes so production teams share one clear picture.
+39. Music Brief Composer: Writing detailed creative and technical briefs for composers and AI music tools — mood, tempo, structure, and references.
+40. Photo Retouch Quality Reviewer: Checking edited or AI-restored images for artifacts, naturalness, and brand fit, and prescribing corrections.
+41. Presentation Visual Architect: Designing slide systems — layout grids, chart styles, and cover treatments — that keep decks consistent and scannable.
+42. Reels Storyboard Planner: Planning short-form video sequences beat by beat: hooks, shots, captions, and pacing tuned to platform norms.
+43. Cover Design Conceptor: Generating and evaluating cover-art concepts for books, albums, and products against genre conventions and shelf appeal.
+44. Accessible Media Checker: Reviewing media for accessibility — captions, transcripts, color contrast, audio descriptions — and producing fix lists.
+45. Nostalgia-Style Art Director: Guiding AI tools to recreate specific retro aesthetic directions — vintage print, film, or poster looks — with authentic detail.
+46. Animated Explainer Planner: Structuring animated explainer videos: narrative arc, scene list, visual metaphors, and script-to-storyboard handoff.
+47. Game Concept Pitch Builder: Turning a game idea into a compelling pitch — core loop, market fit, art direction, and one-page narrative.
+48. Set & Prop Visual Scout: Generating location, set, and prop concept images to align crews before building physical or virtual worlds.
+49. Character Design Brief Maker: Writing detailed character briefs — silhouette, palette, personality, and wardrobe — for illustrators and AI tools.
+50. Editorial Layout Grid Designer: Designing repeatable page layouts for print and digital editorial that keep long-form content elegant and readable.
+51. Event Visual Identity Kit: Creating cohesive visual themes — banners, signage, and social assets — for events, launches, and campaigns.
+52. Podcast Cover & Trailer Studio: Concepting cover art and audio/video trailer assets that communicate a podcast's premise in seconds.
+53. Thumbnail Click-Stop Designer: Designing and A/B-thinking video thumbnails that stand out in feeds while honestly representing the content.
+BUSINESS, SALES & OPERATIONS
+34. Customer Support Chatbots: Handling basic customer questions and returns twenty-four hours a day.
+35. Translation and Localization: Converting text and video into different languages with local slang.
+36. Lead Generation: Finding and verifying business contact details from public web data.
+37. Data Analysis: Turning raw spreadsheets into clear charts and business insights.
+38. Presentation Creation: Building slide decks and pitch presentations from rough outlines.
+39. Legal Document Drafting: Creating basic contracts and reviewing standard legal agreements.
+40. Financial Forecasting: Predicting future revenue and managing basic business budgets.
+41. Review Management: Reading and writing replies to customer feedback online.
+42. Competitor Intelligence Tracking: Scraping competitor pricing and marketing strategies to alert leaders.
+43. Inventory Optimization: Predicting exact product stock requirements to avoid warehouse shortages.
+44. Cold Outreach Personalization: Writing tailored B2B sales pitches based on a prospect's recent activities.
+45. HR & Employee Onboarding: Automating training modules and tracking employee progress.
+46. Meeting Transcription & Action Items: Summarizing live conference calls and extracting to-do lists.
+47. Patent & Trademark Searching: Analyzing global database filings to check if a design breaks existing laws.
+48. Contract Compliance Auditing: Scanning large agreements to call out hidden fees and liabilities.
+49. E-Commerce Dynamic Pricing: Adjusting product prices across web stores in real-time based on market demand.
+50. Customer Sentiment Analysis: Scanning thousands of internet mentions to grade public feeling toward a brand.
+51. Fraud Detection & Risk Scoring: Flagging unusual payment charges and identity theft indicators instantly.
+52. Procurement Evaluation: Scoring third-party vendor performance and delivery reliability automatically.
+53. Regulatory Compliance Monitoring: Scanning internal files to spot corporate policy violations or security threats.
+54. Real Estate Valuation & Appraisal: Calculating accurate property prices based on local market data trends.
+55. Affiliate Content Fleet Management: Orchestrating hundreds of informational blogs with automated internal linking.
+56. Business Idea Validator: Stress-testing a business idea against real market evidence — demand signals, competitors, and economics — before investment.
+57. Pitch Deck Storyteller: Turning a business's messy materials into a clear investor pitch narrative with the right flow and emphasis.
+58. Sales Email Personalizer: Crafting tailored outreach that references a prospect's actual situation, needs, and context — not templates.
+59. Objection Handling Coach: Building a library of evidence-based responses to common sales objections, tuned to the product and buyer persona.
+60. Pricing Strategy Analyst: Modeling pricing options — tiers, bundles, and anchors — against perceived value, competition, and willingness to pay.
+61. KPI Dashboard Designer: Designing the small set of metrics that actually track business health and laying out a dashboard that surfaces them.
+62. Process Automation Scout: Mapping a team's repetitive workflows and identifying which steps are safe, high-value candidates for automation.
+63. Customer Feedback Analyzer: Turning support tickets, reviews, and surveys into themes, priorities, and action plans.
+64. Market Research Summarizer: Condensing industry reports, filings, and news into an executive briefing with the implications for your business.
+65. Proposal Response Architect: Structuring persuasive proposals and bids that map directly to a client's stated goals and evaluation criteria.
+66. Meeting Agree-and-Action Extractor: Converting meeting transcripts into clear decisions, owners, and deadlines, and flagging unresolved items.
+67. Standard Operating Procedure Builder: Turning tribal knowledge and scattered instructions into clear, followable SOPs new hires can execute.
+68. Onboarding Plan Designer: Designing a structured ramp plan for new hires — goals, checkpoints, and learning resources for the first 90 days.
+69. Competitive Differentiator Finder: Analyzing how your offering compares to alternatives and articulating genuine reasons a buyer should choose it.
+70. Customer Journey Mapper: Documenting the end-to-end customer journey, spotting drop-offs and friction, and prioritizing fixes.
+71. Forecast Sensitivity Builder: Building financial models with clear assumptions and sensitivity scenarios so decisions survive uncertainty.
+72. Vendor Comparison Evaluator: Creating weighted scorecards to compare vendors and services fairly against your real requirements.
+73. Risk Register Builder: Identifying, scoring, and tracking the key risks to a project or business with owners and mitigations.
+74. Hiring Brief Writer: Writing accurate, compelling role briefs that attract the right candidates and set expectations.
+75. Quarterly Retro Host: Structuring and facilitating honest retrospectives that produce a short, agreed improvement list.
+76. Sales Funnel Diagnostician: Reviewing funnel metrics to find where prospects leak and recommending targeted fixes at each stage.
+77. Contract Clause Summarizer: Explaining dense contract language in plain terms and flagging unusual terms, obligations, and deadlines.
+MARKETING, ADVERTISING & PR
+56. Influencer Sourcing: Matching corporate brands with niche creators whose audiences fit ideal metrics.
+57. Programmatic Ad Bidding: Managing real-time digital billboard and banner auction budgets automatically.
+58. Press Release Generation: Drafting journalistic media briefs and identifying target reporters.
+59. Brand Name & Tagline Ideation: Generating available corporate business titles and domain options.
+60. Funnel Optimization & A/B Testing: Shifting web traffic to whichever web page layout makes more sales.
+61. Community Management Moderation: Filtering out spam and toxicity across massive forums and Discord groups.
+62. User Review Prompts: Creating triggered post-purchase workflows that guide shoppers to write reviews.
+63. Retargeting Campaign Sequences: Drafting multi-tier ad scripts that slowly nudge cart-abandoners back to purchase.
+64. Interactive Survey Funnels: Building custom questionnaires that pitch a precise product based on answers.
+65. Podcast Guest Outreach: Identifying top audio shows and personalizing pitch notes to get executives booked.
+66. Local SEO Map Pack Optimization: Optimizing brick-and-mortar storefront profiles to rank higher in maps.
+67. Audience Persona Builder: Turning analytics and customer conversations into realistic personas that guide every campaign decision.
+68. Campaign Brief Generator: Writing clear creative briefs — objective, audience, message, channels, and success metrics — before creative work starts.
+69. Content Calendar Planner: Building an editorial calendar that balances topics, formats, channels, and seasons against marketing goals.
+70. Hook & Headline Lab: Generating and scoring many headline and hook options against attention, clarity, and click-through criteria.
+71. Ad Copy Variant Engine: Producing structured ad copy variants for A/B testing across platforms while staying on-message and compliant.
+72. PR Story Angle Finder: Identifying newsworthy angles in a company's activities and drafting pitches tailored to specific journalists.
+73. Reputation Monitor Summarizer: Aggregating mentions, reviews, and sentiment into a concise weekly reputation briefing with risk flags.
+74. Launch Sequence Planner: Choreographing a product launch — pre-tease, reveal, amplification, and follow-up — across channels with timing.
+75. Social Listening Insight Miner: Turning conversations and trends into actionable insights about audience interests, pain points, and language.
+76. UGC Brief Writer: Writing clear briefs for user-generated content creators that protect the brand while allowing authentic voice.
+77. Marketing Attribution Translator: Explaining how marketing touchpoints drive outcomes and recommending measurement setups that avoid false credit.
+SOFTWARE, CODING & TECHNICAL SERVICES
+67. Coding and Debugging: Writing and fixing computer software programs in seconds.
+68. Legacy Code Modernization: Translating ancient programming languages like COBOL into modern Python or Go code.
+69. Automated Software QA Testing: Writing test scripts that attempt to break software apps before public release.
+70. No-Code Application Generation: Building functioning mobile apps directly from conversational text.
+71. Database Query Optimization: Structuring complex relational databases and fixing slow search commands.
+72. Smart Contract Auditing: Scanning web3 and blockchain codes to ensure they are safe from hacker exploits.
+73. Cybersecurity Patching: Monitoring server infrastructure and writing code patches to close security holes.
+74. Synthetic Data Generation: Creating massive datasets of fake but realistic text to safely train other AI networks.
+75. Cloud Infrastructure Provisioning: Writing setup files to provision AWS or Azure cloud servers automatically.
+76. API Wrapper Development: Building custom middleware connectors that allow different software products to talk.
+77. Browser Extension Automation: Developing micro-tools for browsers that scrape info or automate workflows.
+78. Hardware Firmware Optimization: Writing highly efficient, lightweight machine code for microchip devices.
+79. Code Explainer for Non-Developers: Explaining what code and systems do in plain language so stakeholders can make informed decisions.
+80. Prompt Engineering Practice Lab: Teaching and practicing prompt design techniques — structure, context, and iteration — for reliable AI outputs.
+81. Low-Code Solution Architect: Designing practical automations and workflows using no-code and low-code tools to solve real business problems.
+82. Legacy Documentation Translator: Converting outdated documentation and comments into accurate, current technical docs for modern teams.
+83. API Integration Planner: Planning how to connect systems via APIs — data flows, error handling, and security — before implementation.
+84. Code Review Mentor: Providing structured, constructive code-review feedback that improves both the code and the developer.
+85. Debugging Strategy Coach: Teaching a systematic approach to diagnosing and fixing bugs — reproduce, isolate, hypothesize, verify.
+86. Technical Debt Assessor: Reviewing a codebase for maintainability risks and producing a prioritized, business-friendly debt reduction plan.
+87. Test Case Designer: Designing thorough test cases and scenarios — happy path, edge cases, and failures — for any feature.
+88. Dev Environment Setup Guide: Writing clear setup guides for developer environments that new contributors can follow without tribal knowledge.
+89. Database Schema Explainer: Explaining database schemas and queries in plain terms and suggesting improvements for clarity and performance.
+90. Security Awareness Trainer: Building practical security-awareness materials and scenarios that help non-experts avoid common risks.
+EDUCATION, LIFESTYLE & PERSONAL CARE
+79. Travel Itinerary Planning: Building custom daily vacation plans and booking schedules.
+80. Fitness Coaching: Designing custom workout routines based on body type and goals.
+81. Meal Plan Generation: Creating grocery lists and diet plans for specific health needs.
+82. Personalized Tutoring: Explaining hard math and science topics at a student's own pace.
+83. Event Planning: Organizing guest lists, schedules, and checklist timelines.
+84. Fashion Styling: Recommending clothing combinations based on weather and personal taste.
+85. Interior Design: Suggesting room layouts and paint colors from phone camera scans.
+86. Language Learning Bots: Practicing foreign languages with personas that correct grammar in real-time.
+87. Curriculum & Lesson Planning: Building weekly educational lecture materials and worksheets for teachers.
+88. Genealogy Deep Search: Sifting historical scanned documents to trace family lineages and translate text.
+89. Speech Therapy Practice Companions: Listening to patient pronunciations and offering precise mouth adjustment feedback.
+90. Mental Well-being Cognitive Exercises: Guiding users through text-based stress relief and thought-tracking methods.
+91. Gardening & Urban Farming Planners: Tracking plant health from leaf pictures and generating watering schedules.
+92. Executive Schedule Triaging: Managing chaotic corporate calendars and prioritizing urgent messages.
+93. College Application Advisory Tools: Evaluating high school portfolios to suggest target colleges and edit essays.
+94. Pet Health & Behavior Analysis: Diagnosing common pet issues from phone scans of symptoms.
+95. Hobbyist Crafting Pattern Generators: Creating printable woodcarving blueprints, 3D printing shapes, and sewing patterns.
+96. Life Milestone Scrapbooking: Organizing digital photos, diaries, and timelines into physical history books.
+97. Financial Literacy Training: Building interactive scenario games to teach teenagers basic budgeting and taxes.
+98. Sleep Coaching: Analyzing wearable device tracking logs to output personalized routine changes.
+99. Elderly Companion Check-ins: Conversing with seniors over voice to keep them company and track medications.
+100. Recipe Customization: Reworking classic recipes into exact diabetic, vegan, or allergy-safe alternatives.
+101. Personal Learning Path Designer: Designing a step-by-step learning roadmap for any goal — skills, resources, milestones, and practice — personalized to the learner.
+102. Explain-It-To-Me Tutor: Explaining any topic at the right depth and analogy level for the learner, checking understanding as it goes.
+103. Study Plan Optimizer: Building spaced, balanced study schedules that fit a learner's calendar and energy patterns.
+104. Flashcard Deck Creator: Turning any material into effective flashcards with good prompts and answers for active recall.
+105. Concept Linking Mapper: Building visual maps showing how ideas connect, so learners see the structure of a subject.
+106. Skill Gap Analyzer: Comparing a person's current skills to a target role or goal and laying out the specific gaps to close.
+107. Career Change Planner: Mapping a realistic transition from one career to another — transferable skills, credentials, and steps.
+108. Resume-Boost Project Finder: Recommending concrete portfolio projects and experiences that strengthen a resume for a target role.
+109. Interview Story Coach: Helping people turn experiences into compelling, structured answers for behavioral interviews.
+110. Life Admin Organizer: Systematizing the personal paperwork and recurring tasks of adult life — bills, renewals, documents, and deadlines.
+111. Digital Declutter Planner: Planning and executing a step-by-step cleanup of digital clutter — files, photos, emails, and subscriptions.
+112. New Skill 30-Day Sprint: Designing a focused 30-day plan to make meaningful progress on a new skill with daily actions and checkpoints.
+113. Personal Knowledge Base Builder: Designing a simple, searchable system for capturing and retrieving notes, ideas, and learnings.
+114. Productivity System Auditor: Reviewing a person's current productivity tools and habits and recommending a simpler system that fits them.
+115. Decision Framework Advisor: Teaching practical decision-making frameworks for big and small life choices, with worked examples.
+116. Reading List Curator: Building a personalized reading plan — books, articles, and papers — that supports specific goals and interests.
+117. Budgeting Habit Coach: Helping people build and stick to a simple personal budget with routines and gentle accountability.
+118. Morning Routine Architect: Designing a realistic morning routine that fits a person's schedule and supports their priorities.
+119. Evening Wind-Down Planner: Designing an evening routine that improves sleep, reflection, and readiness for the next day.
+120. Habit Design Consultant: Applying habit-science to design small, sustainable behavior changes for any personal goal.
+121. Focus Session Planner: Planning deep-work sessions — environment, duration, and breaks — that match a person's focus patterns.
+122. Life Goals Reflection Partner: Facilitating structured reflection on values, goals, and priorities to guide intentional decisions.
+

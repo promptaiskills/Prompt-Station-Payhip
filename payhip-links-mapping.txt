@@ -1,0 +1,27 @@
+# Payhip links mapping — paste your Payhip product links below, one per line:
+#
+#     slug , payhip-link
+#
+# The link can be the full URL (https://payhip.com/b/AbCdE), "b/AbCdE", or just the key (AbCdE).
+# You can get each product's link from Payhip → Products → Share / Embed.
+#
+# These are the 14 products that previously had Gumroad links (slugs shown for convenience —
+# you can also match by product name or id like PS-00001):
+#
+# copywriting , 
+# seo-optimization , 
+# e-commerce-product-descriptions , 
+# email-marketing , 
+# resume-and-cover-letter-writing , 
+# transcription-and-summaries , 
+# technical-documentation , 
+# scriptwriting-and-storyboarding , 
+# social-media-captioning , 
+# book-and-novel-ghostwriting , 
+# academic-research-and-synthesis , 
+# grant-and-proposal-writing , 
+# real-time-subtitling-and-dubbing , 
+# ai-writing-copilot-evaluator , 
+#
+# Then run:  node scripts/apply-payhip-links.mjs payhip-links-mapping.txt
+# and:       npm run build

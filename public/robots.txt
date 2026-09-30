@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Utility pages — no-follow search & API bits
+Disallow: /search
+Disallow: /search-index.json
+Disallow: /.netlify/
+
+Sitemap: https://YOUR-STORE.netlify.app/sitemap-index.xml

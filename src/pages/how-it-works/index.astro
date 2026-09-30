@@ -1,0 +1,140 @@
+---
+/**
+ * /how-it-works/ — purchase, delivery, access & payment explainer,
+ * including the optional Payhip license verification widget.
+ */
+import BaseLayout from '../../components/BaseLayout.astro';
+import FaqList, { type FaqPair } from '../../components/FaqList.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { PAYHIP, SITE } from '../../config/site.mjs';
+import { getProducts } from '../../lib/catalog.ts';
+
+const licenseProducts = getProducts().filter(
+  (p) => p.payhipProductId && !/YOUR_/.test(p.payhipProductId)
+);
+const faqs: FaqPair[] = [
+  { q: 'What exactly am I buying?', a: 'Every product is a structured AI skill pack: prompt sets, workflow run-sheets and quality checklists engineered for one specific job. You get files you can reuse inside ChatGPT, Claude, Gemini or any compatible tool.' },
+  { q: 'How do I get my files after buying?', a: 'Instantly, by email. Payhip sends your receipt with a secure download page link the moment payment succeeds. Keep that email — the link lets you re-download your files (5 downloads per file, valid for 30 days). Lost it? Contact us and we’ll re-send it.' },
+  { q: 'Does checkout leave this website?', a: 'Yes, briefly — clicking Buy opens Payhip’s secure checkout page in a new tab. Payment is processed by Payhip (cards via Stripe, PayPal available) and this site never sees your card details.' },
+  { q: 'Can I use the skill packs with any AI tool?', a: 'Most packs work with any major ChatGPT-style assistant. Each product lists the tools it was built and tested for, so check the "Works with" line on the product page.' },
+  { q: 'What if I have a problem with a purchase?', a: 'Contact us and we’ll sort it out. Refunds follow Payhip’s refund process on every sale — tell us what happened and we’ll help.' },
+  { q: 'Do you build custom skills?', a: 'Yes — that’s the service-request flow. Describe the skill you need (nature, behavior, topics) and we’ll propose a build.' },
+];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+<BaseLayout
+  title="How it works — purchase, delivery & access"
+  description="How buying works on Prompt Station: secure Payhip checkout, instant email delivery, and download links you can always get re-sent."
+  canonical="/how-it-works/"
+>
+  <JsonLd data={schema} />
+  <section class="border-b border-line bg-surface">
+    <div class="container-x py-12 sm:py-16">
+      <p class="eyebrow">How it works</p>
+      <h1 class="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">From click to skill in about a minute</h1>
+      <p class="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
+        Everything on {SITE.name} is a digital product delivered by Payhip. Here’s the exact journey, the delivery
+        details, and the honest limits of what a storefront can and cannot do.
+      </p>
+    </div>
+  </section>
+
+  <section class="container-x py-12 sm:py-16">
+    <ol class="grid gap-6 md:grid-cols-3">
+      {[
+        { n: '01', t: 'Choose your skill', b: 'Browse the catalog or search. Every product page explains what the pack does and what’s inside.' },
+        { n: '02', t: 'Checkout securely', b: 'The Buy button opens Payhip’s secure checkout in a new tab. You pay Payhip directly (card via Stripe or PayPal) — no account needed here.' },
+        { n: '03', t: 'Instant access', b: 'Payhip emails the receipt with your secure download page link immediately after payment — your files are one click away.' },
+      ].map((s) => (
+        <li class="card p-6">
+          <span class="font-display text-3xl font-bold text-brand/20">{s.n}</span>
+          <h2 class="mt-2 font-display text-lg font-bold tracking-tight">{s.t}</h2>
+          <p class="mt-2 text-sm leading-relaxed text-ink-soft">{s.b}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section id="delivery" class="border-y border-line bg-surface">
+    <div class="container-x grid gap-10 py-12 sm:py-16 lg:grid-cols-2">
+      <div>
+        <p class="eyebrow">Delivery & access</p>
+        <h2 class="mt-3 font-display text-2xl font-bold tracking-tight">Where your files live</h2>
+        <ul class="mt-5 space-y-4 text-sm leading-relaxed text-ink-soft">
+          <li class="flex gap-3"><span class="font-display font-bold text-brand">1.</span><span><strong class="font-semibold text-ink">Purchase email.</strong> Every sale sends a receipt with a secure download page link — the link is per-purchase and cannot be shared to bypass payment.</span></li>
+          <li class="flex gap-3"><span class="font-display font-bold text-brand">2.</span><span><strong class="font-semibold text-ink">Re-downloads.</strong> Your download page link allows 5 downloads per file for 30 days after purchase. Save the email — and if you lose it, <a href="/contact/" class="font-semibold text-brand underline-offset-2 hover:underline">contact us</a> and we’ll re-send your link.</span></li>
+          <li class="flex gap-3"><span class="font-display font-bold text-brand">3.</span><span><strong class="font-semibold text-ink">License keys (where enabled).</strong> Some products ship with a license key so you can verify your purchase — try the checker below.</span></li>
+        </ul>
+        <div class="mt-6 rounded-md border border-line bg-paper px-4 py-3 text-xs leading-relaxed text-ink-faint">
+          <strong class="font-semibold text-ink">How we keep files secure:</strong> paid files are never placed in this site’s public
+          assets, and this site never "downloads" paid files on your behalf. File storage and delivery are handled entirely
+          by Payhip’s infrastructure, which is what lets us be honest about what is and isn’t possible in a static
+          storefront. <a href="/legal/terms/" class="font-semibold text-brand underline-offset-2 hover:underline">Details in our terms.</a>
+        </div>
+      </div>
+
+      <div class="card p-6 sm:p-8">
+        <h2 class="font-display text-lg font-bold tracking-tight">Verify a purchase (license keys)</h2>
+        <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+          Enter the license key from your purchase email. This checks it against Payhip’s official license API —
+          a real verification, not a mock.
+        </p>
+        {PAYHIP.licenseVerifyEnabled && licenseProducts.length > 0 ? (
+          <form data-verify-form class="mt-5 space-y-4">
+            <div>
+              <label for="v-product" class="field-label">Product</label>
+              <select id="v-product" name="product_key" class="field-input">
+                <option value="">Select a product…</option>
+                {licenseProducts.map((p) => (
+                  <option value={p.payhipProductId}>{p.name}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label for="v-key" class="field-label">License key</label>
+              <input id="v-key" name="license_key" class="field-input" placeholder="XXXXX-XXXXX-XXXXX-XXXXX" autocomplete="off" spellcheck="false" />
+            </div>
+            <button type="submit" class="btn-primary w-full">Verify license</button>
+            <div data-verify-out role="status" aria-live="polite" hidden></div>
+          </form>
+        ) : (
+          <p class="mt-4 rounded-md border border-dashed border-line-strong bg-paper px-4 py-3 text-sm text-ink-faint">
+            License verification will appear here once products ship with real Payhip product keys and license keys
+            (add them to the <code class="rounded bg-ink/5 px-1 py-0.5">payhip_product_id</code> column in the product CSV).
+          </p>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-12 sm:py-16">
+    <FaqList items={faqs} title="Common questions" />
+  </section>
+
+  <section class="container-x pb-4">
+    <div class="grid gap-4 rounded-md border border-line bg-surface p-6 sm:grid-cols-3 sm:p-8">
+      {[
+        { t: 'Secure payments', b: 'No card data ever touches this site — payment runs on Payhip (Stripe & PayPal).' },
+        { t: 'Instant delivery', b: 'Receipt and download links arrive by email the moment payment succeeds.' },
+        { t: 'No fake checkouts', b: 'Purchase states you see are driven by real Payhip mechanics — never simulated.' },
+      ].map((tp) => (
+        <div>
+          <h3 class="font-display text-base font-bold tracking-tight">{tp.t}</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-ink-soft">{tp.b}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <script>
+    import '../../scripts/verify.ts';
+  </script>
+</BaseLayout>

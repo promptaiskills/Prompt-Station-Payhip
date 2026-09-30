@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Hydration Daily Target Water Flavor Schedulers — AI skill pack cover">
+  <rect width="1200" height="900" fill="#F3EFF8"/>
+  <path d="M0 0h1200v24H0z" fill="#7A5AA6"/>
+  <rect x="90" y="70" width="9" height="9" fill="#7A5AA6"/>
+  <text x="112" y="80" font-size="17" font-weight="600" letter-spacing="2.5" fill="#7A5AA6" font-family="'Inter',Arial,sans-serif">PROMPT STATION</text>
+  <g stroke="#7A5AA6" stroke-opacity="0.14" stroke-width="1">
+    <line x1="90" y1="240" x2="1110" y2="240"/><line x1="90" y1="320" x2="1110" y2="320"/>
+    <line x1="90" y1="400" x2="1110" y2="400"/><line x1="90" y1="480" x2="1110" y2="480"/>
+    <line x1="90" y1="560" x2="1110" y2="560"/><line x1="90" y1="640" x2="1110" y2="640"/>
+  </g>
+  <text x="90" y="341.9" font-size="64" font-weight="700" fill="#15181D" font-family="'Space Grotesk','Inter',Arial,sans-serif" letter-spacing="-0.5">Hydration Daily Target</text>
+  <text x="90" y="420.0" font-size="64" font-weight="700" fill="#15181D" font-family="'Space Grotesk','Inter',Arial,sans-serif" letter-spacing="-0.5">Water Flavor Schedulers</text>
+  <rect x="90" y="760" rx="999" width="30" height="30" fill="#7A5AA6"/>
+  <text x="132" y="782" font-size="18" fill="#3F454E" font-family="'Inter',Arial,sans-serif">prompt-pack</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Prompt Station product cover">
+  <rect width="1200" height="900" fill="#F1F3F6"/>
+  <path d="M0 0h1200v24H0z" fill="#15181D"/>
+  <rect x="90" y="70" width="9" height="9" fill="#15181D"/>
+  <text x="112" y="80" font-size="17" font-weight="600" letter-spacing="2.5" fill="#15181D" font-family="'Inter',Arial,sans-serif">PROMPT STATION</text>
+  <text x="90" y="430" font-size="56" font-weight="700" fill="#15181D" font-family="'Space Grotesk','Inter',Arial,sans-serif">Prompt Station</text>
+  <text x="90" y="490" font-size="22" fill="#3F454E" font-family="'Inter',Arial,sans-serif">AI skill packs & prompt systems</text>
+</svg>

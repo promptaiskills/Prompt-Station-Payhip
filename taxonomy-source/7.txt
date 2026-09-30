@@ -1,0 +1,213 @@
+
+
+Veterinary Pharmaceuticals, Livestock Genetics & Agri-Biotech
+501. Livestock mRNA Vaccine Delivery Modeling: Simulating lipid nanoparticle stability in cattle blood streams to optimize automated farm dosing injectors.
+502. Canine Genetic Disease Lineage Mapping: Scanning global veterinary DNA registries to flag hereditary cardiac defects before commercial breeding selections.
+503. Avian Influenza Airborne Mutation Predictors: Correlating seasonal bird migration flight paths with localized humidity logs to predict poultry virus variants.
+504. Equine Bone Density Thermal Scans: Processing micro-radiograph scans of racehorse legs to spot stress fractures before they lead to catastrophic track injuries.
+505. Aquaculture Probiotic Water Blend Synthesizers: Analyzing microbial water counts in shrimp farms to design customized enzyme treatments that prevent bacterial die-offs.
+506. Feline Dietary Allergen Elimination Solvers: Cross-referencing blood biomarker changes against food ingredient logs to design targeted hyper-allergenic pet diets.
+507. Swine Respiratory Acoustic Cough Trackers: Processing barn house audio arrays to automatically separate individual pig cough frequencies from ambient farm noise.
+508. Beehive Parasite Mite Visual Screening: Using micro-cameras at hive entrances to automatically detect and flag Varroa destructor mites clinging to returning bees.
+509. Bovine Artificial Insemination Success Optimizers: Tracking cow body temperature cycles and tracking movements to pinpoint the exact hours for peak fertilization windows.
+510. Exotic Zoo Animal Medication Dosages Synthesizers: Scaling pharmaceutical compound curves for rare or endangered species using physiological bone and weight approximations.
+511. Pet Medication Reminder System: Designing simple routines and reminders for giving pets medications correctly.
+512. Pet Diet Planning Guide: Helping pet owners plan balanced feeding that matches their pet's life stage and needs.
+513. Farm Record Keeper: Building a simple system for farmers to track animals, treatments, and productivity.
+514. Pet Health Log Builder: Designing a portable health log for pets — vaccines, visits, and concerns.
+515. Backyard Poultry Starter Guide: Planning a healthy, manageable backyard flock from setup to daily care.
+516. Breed Selection Advisor: Helping families choose a pet breed that fits their home, energy, and experience.
+517. Feed Label Decoder: Explaining pet food and livestock feed labels so buyers choose well.
+518. Herd Health Calendar Planner: Designing a seasonal health and vaccination calendar for small farms.
+519. Pet Insurance Comparer: Helping pet owners compare pet insurance value and coverage fairly.
+520. Livestock Marketing Basics Guide: Teaching small farmers practical ways to market animals and products.
+High-Tech Mining Automation, Mineralogy & Subsurface Robotics
+511. Autonomous Mine Haul Truck Path Calibration: Real-time path alterations for 400-ton mining trucks passing through narrow, shifting open-pit dirt tiers.
+512. Diamond Kimberlite Pipe Sonar Density Scans: Processing seismic sound wave returns to map the exact geometry of subterranean volcanic rock channels containing gems.
+513. Underground Mining Drone Air Turbulence Filters: Stabilizing flight navigation systems for drone scanners passing through deep, high-velocity ventilation shafts.
+514. Gold Core Sample Laser-Induced Breakdown Spectroscopy: Processing light spectrum emissions to map out precious metal percentages instantly without lab acid washes.
+515. Open-Pit Mine High-Wall Dirt Shift Trackers: Analyzing millimeter-wave radar returns from rock faces to issue evacuation alarms hours before a landslide.
+516. Lithium Brine Pool Algae Contamination Monitors: Processing satellite color spectrum timelines to track and flag biological growths that drop lithium harvest purity.
+517. Coal Seam Methane Gas Boundary Trajectory Models: Simulating subterranean rock permeability records to map safe drill paths away from explosive gas pockets.
+518. Subsurface Water Aquifer Breaching Mitigation Models: Processing borehole structural logs to stop mining machinery from tearing into underground rivers.
+519. Mining Tailings Dam Chemical Seepage Trackers: Analyzing satellite thermal images to locate toxic chemical leaks passing through earthen dam containment walls.
+520. Smelter Furnace Slag Layer Fluid Thickness Optimizers: Real-time micro-adjustments of iron smelting furnace temperatures to minimize waste slag retention.
+521. Mineral Collecting Guide: Helping hobbyists identify, collect, and display minerals responsibly.
+522. Gemstone Buying Guide: Teaching buyers how to evaluate gems, clarity, and authenticity.
+523. Geology Basics Tutor: Explaining rocks, minerals, and earth processes in accessible terms.
+524. Rockhounding Safety Guide: Teaching safe, legal rockhounding and fossil collecting practices.
+525. Crystal Healing Claims Checker: Providing honest, evidence-based context about crystal claims.
+526. Subsurface Utilities Awareness Guide: Helping homeowners know what's underground before digging.
+527. 3D Print Material Guide: Helping makers choose materials and settings for 3D printing projects.
+528. Underground Construction Explainer: Explaining tunneling and underground projects to the public.
+529. Jewelry Appraisal Basics Guide: Helping people understand how jewelry and gem appraisals work.
+530. Mining History Tour Planner: Designing educational tours of mining heritage sites.
+Polar Logistics, Glaciology & Sub-Zero Infrastructure
+521. Arctic Shipping Ice Floe Thickness Radar Analytics: Processing satellite synthetic-aperture radar logs to map the safest paths for commercial cargo hulls through pack ice.
+522. Permafrost Pipeline Structural Shifting Alarms: Tracking structural tilt sensors along arctic oil pipelines to flag foundation sagging caused by ground thaws.
+523. Antarctic Research Station Fuel Freeze Predictions: Modeling fluid viscosity patterns under extreme sub-zero temperatures to optimize thermal pipe insulation settings.
+524. Glacial Calving Wave Coastal Tsunami Trackers: Simulating ice shelf break-off volumes against local fjord topology to issue wave alerts to arctic fishing ports.
+525. Sub-Zero Wind Turbine Blade Ice Load Dampers: Real-time adjustments of internal blade heating arrays based on atmospheric freezing rain sensor feeds.
+526. Ice Road Trucking Trajectory Safety Engines: Matching heavy vehicle weight metrics with localized thermal ice-density logs to guide long-haul drivers safely across frozen lakes.
+527. Polar Satellite Ground Station Dish De-Icing Schedules: Coordinating mechanical heater activations right as ice accumulation begins to disrupt deep-space communication links.
+528. Sub-Glacial Core Drill Acoustic Slip Detectors: Processing drill string acoustic emissions to prevent expensive research bits from jamming in deep ice matrices.
+529. Tundra Vehicle Route Environmental Tearing Preventers: Directing heavy exploration machinery to paths that avoid tearing up fragile arctic moss layers.
+530. Arctic Port Icebreaker Ship Allocation Schedulers: Coordinating ice-clearing vessels based on commercial cargo ship arrival timelines and shifting wind jams.
+531. Cold Weather Packing Guide: Teaching layering and gear choices for cold-weather trips.
+532. Winter Driving Safety Planner: Preparing drivers for safe winter driving — tires, kits, and skills.
+533. Home Freeze Protection Guide: Helping homeowners prevent and handle frozen pipes in cold spells.
+534. Ice Safety Awareness Guide: Teaching how to judge ice safety for recreation and avoid tragedy.
+535. Cold Climate Gardening Planner: Designing gardens that thrive in short, cold growing seasons.
+536. Snow Removal Logistics Planner: Planning efficient, safe snow clearing for homes and driveways.
+537. Cold-Weather Camping Guide: Teaching safe, comfortable winter camping and outdoor skills.
+538. Frost Heave Home Checklist: Helping northern homeowners spot and address frost-related damage.
+539. Polar Travel Preparation Guide: Planning the gear, permits, and logistics for polar region visits.
+540. Winter Energy Saving Guide: Reducing home heating costs with practical cold-climate tips.
+Autonomous Drone Defense, Airspace Security & Countermeasures
+531. Drone Swarm RF Fingerprint Trajectory Trackers: Processing real-time radio frequency scanning logs to locate and identify illicit drone groups invading airport boundaries.
+532. Anti-Drone Laser Targeting Beam Alignment Controls: Micro-mirror tracking systems to keep defensive energy beams focused on moving high-speed rogue micro-drones.
+533. Critical Infrastructure Airspace Optical Threat Classifiers: Distinguishing hobbyist camera drones from threatening payloads using high-speed security camera feeds.
+534. Drone Jammer Frequency Geo-Fencing Optimization: Automatically adjusting localized signal blocking waves to knock down target rogue drones without dropping local emergency cell networks.
+535. Corporate HQ Window Audio Laser-Snooping Deflectors: Generating acoustic vibration counters on office windows to block external laser microphones trying to record interior conversations.
+536. Drone Payload Kinetic Drop Trajectory Projectors: Analyzing rogue drone movement angles to predict the exact drop zones of smuggled contraband over prison fences.
+537. Airfield Bird Strike Hazard Acoustic Deterrent Triggers: Matching airport camera feeds of bird flocks with automated species-specific acoustic sound deterrent waves.
+538. Defensive Drone Net-Gun Interception Vector Trackers: Calculating the exact launch angles for interceptor drones firing capture nets at moving targets.
+539. Rogue Drone Ground Pilot Geolocation Triangulators: Analyzing signal propagation times across multiple antennas to map the exact physical coordinates of an illicit drone operator.
+540. Smart-Grid Substation Drone Intrusion Net Alarms: Monitoring physical laser perimeter fences around electrical hubs to lock down key systems if low-flying drones enter.
+541. Drone Registration Guide: Guiding drone owners through registration and legal operation requirements.
+542. Drone No-Fly Zone Checker: Helping drone pilots check airspace rules before every flight.
+543. Drone Safety Training Planner: Building a personal drone safety and flying-skills training plan.
+544. Personal Privacy & Drones Guide: Helping people understand drone privacy rules and their rights.
+545. Drone Insurance Guide: Explaining drone insurance options for hobbyists and businesses.
+546. Airspace Basics Tutor: Teaching everyday understanding of controlled airspace and why it matters.
+547. Drone Photography Ethics Guide: Teaching responsible, respectful drone photography practices.
+548. Geofencing Basics Guide: Explaining how geofencing protects airspace and how to fly within it.
+549. Drone Maintenance Checklist Builder: Building pre-flight and post-flight checklists that keep drones airworthy.
+550. Counter-Drone Awareness Guide: Explaining how drone detection works for event and venue organizers.
+Deep-Tech Patent Analytics, IP Valuation & Clearances
+541. Patent Claim Prior-Art Concept Linkers: Scanning global historical patent files to find hidden design overlaps that simple keyword searches miss.
+542. Automated Patent Application Category Redirection Tools: Adjusting chemical description terminology so filing documents clear specific international categorization rules faster.
+543. IP Infringement E-Commerce Vector Scraping Engines: Crawling international drop-shipping networks to identify factories altering famous design shapes to bypass trademark laws.
+544. Corporate Trade Secret Document Leak Trace Marks: Embedding custom metadata changes into enterprise files to trace the original source of leaked technical data.
+545. Patent Licensing Valuation Royalty Forecasters: Modeling technology adoption curves and competitor growth rates to price patent values for acquisitions.
+546. Patent Litigation Verdict Prediction Analytical Models: Processing historical judge rulings and legal team track records to estimate winning odds for patent lawsuits.
+547. Open-Source Software License Compliance Sweepers: Scanning enterprise code repositories to flag hidden snippets of code breaking strict open-source licensing rules.
+548. Trademark Logo Visual Mutation Trackers: Identifying copycat business logos that twist color balances and shapes to mock famous brand marks legally.
+549. Patent Renewal Fee Expiration Risk Managers: Tracking global maintenance schedules across massive corporate patent portfolios to stop accidental asset drops.
+550. Academic Research Tech Transfer Commercialization Scorers: Processing university science papers to highlight early-stage laboratory discoveries with high business market potential.
+551. Inventor's Idea Notebook Guide: Teaching inventors to document ideas, dates, and development properly.
+552. Patent Basics Tutor: Explaining what patents protect, cost, and whether they're worth filing.
+553. Trademark Search Starter: Guiding small businesses through checking and clearing brand names.
+554. Copyright for Creators Guide: Helping creators understand and protect their copyrights practically.
+555. IP in a Nutshell Tutor: Explaining patents, trademarks, copyrights, and trade secrets plainly.
+556. Licensing Your Invention Guide: Helping inventors understand licensing options and pitfalls.
+557. Provisional Patent Prep Guide: Guiding inventors through preparing a provisional patent application.
+558. Open Source License Decoder: Explaining open-source licenses so developers and users comply.
+559. NDA Basics for Innovators: Teaching when and how to use NDAs before sharing ideas.
+560. IP Dispute Reality Check: Helping people understand the real cost and process of IP disputes.
+Advanced Grid Orchestration, Microgrids & Fusion Support
+551. Microgrid Renewable Power Black-Start Dispatchers: Managing energy shifts across small local battery facilities to restart rural power systems after a regional blackout.
+552. Substation Transformer Thermal Runaway Early Warning Models: Tracking gas and temperature changes in massive utility transformers to schedule swaps before explosive shorts happen.
+553. High-Voltage Direct Current (HVDC) Power Line Sag Monitors: Processing drone camera measurements to locate sections of transmission cables expanding and sagging due to heavy power heat.
+554. Tokamak Fusion Reactor Blanket Lithium Tritium Flow Systems: Real-time control of chemical cooling loops inside experimental fusion reactors to maintain safe heat absorption.
+555. Virtual Power Plant Grid Frequency Stabilizer Engines: Grouping thousands of home electric vehicle batteries to discharge power inside milliseconds when grid speeds drop.
+556. Smart Meter Electricity Theft Detection Analytics: Isolating unusual power consumption variations across regional grids to catch illegal hardware lines tapings.
+557. Grid-Scale Hydrogen Energy Storage Tank Pressure Controllers: Monitoring acoustic and temperature feeds to safely store chemical energy reserves generated by surplus solar winds.
+558. Wind Farm Downstream Turbine Eddy-Current Wake Minimizers: Real-time alignment adjustments of front row wind turbines to stop wind turbulence from cutting power on back rows.
+559. Solar Array Inverter Aging Efficiency Degradation Calculators: Tracking daily power conversion trends to find exactly which field units are breaking down from UV exposure.
+600. Nuclear Power Plant Cooling Tower Water Vapor Scalers: Correlating atmospheric humidity maps with internal reactor core temperatures to balance cooling water consumption.
+561. Home Solar Battery Advisor: Helping homeowners decide if home batteries pair well with solar.
+562. Electricity Market Basics Tutor: Explaining how electricity prices and markets affect home bills.
+563. Power Outage Preparedness Planner: Building a household plan and kit for power outages.
+564. Time-of-Use Rate Decoder: Helping households shift usage to save with time-of-use rates.
+565. Generators Buying Guide: Helping households choose and safely use backup generators.
+566. Grid Basics Explainer: Explaining how the power grid works in everyday terms.
+567. Energy Storage Careers Pathfinder: Mapping careers in battery, grid, and clean-energy fields.
+568. Smart Meter Guide: Helping people read smart meters and use the data wisely.
+569. Demand Response Participant Guide: Explaining how households can benefit from demand-response programs.
+570. Clean Energy Project Explainer: Explaining local solar, wind, and grid projects to communities.
+Specialized Forensic Profiling & Digital Antiquities Checkers
+561. Skeletal Fragment 3D Craniofacial Reconstruction Generative Engines: Creating high-fidelity digital facial representations from broken or aged human skull bones for forensic cases.
+562. Art Forgery Brushstroke Micro-Texture Authenticator Tools: Analyzing microscopic paint layer textures to isolate the distinct movements of legendary artists from modern copies.
+563. Archaeological Buried Structure Lidar Ground Filtering Systems: Stripping thick jungle leaf lines from airborne laser data to reveal the architectural footprints of lost ancient towns.
+564. Crime Scene Blood Splatter Kinetic Origin Solvers: Processing 3D room scans to automatically map out the precise speed, angle, and weapon source points of fluid drops.
+565. Ancient Clay Tablet Fragment Cuneiform Script Reconstructors: Scanning thousands of broken historical stone pieces to digitally patch together missing sections of trading logs.
+566. Digital Audio Forensics Echo Location Stance Vectors: Analyzing sound reflections inside old recordings to map the physical position and distance of a shooter from a microphone.
+567. Illicit Antiquities Trade Forum Scraper Systems: Crawling darknet networks and social groups to find looted historic artifacts matching international stolen museum files.
+568. Document Ink Luminescence Forgery Verification Tools: Scanning signatures under targeted light waves to check if legal wills or historical documents were altered after writing.
+569. Fossil Matrix Industrial CT Specimen Slice Assemblers: Turning raw X-ray data of rocks into clean 3D models of fragile dinosaur or bird bone fossils without physical chiseling.
+570. Historical Wreck Ballast Stone Seafloor Displacement Models: Processing maritime sonar layouts of scattered weight stones to calculate the original shape and cargo capacity of lost sailing ships.
+571. Online Scam Profiler: Teaching people to recognize scam patterns and profiles before they engage.
+572. Identity Verification Guide: Helping people verify who they're dealing with online before sharing info.
+573. Deepfake Awareness Guide: Teaching people to spot and question manipulated media and voices.
+574. Antique Authentication Starter: Helping collectors start verifying the authenticity of antiques.
+575. Family Heirloom Valuer: Guiding families on how to get heirlooms appraised responsibly.
+576. Counterfeit Detection Basics: Teaching practical ways to spot common counterfeit goods.
+577. Digital Footprint Audit: Helping people review what's publicly findable about them online.
+578. Social Engineering Defense Guide: Teaching people to recognize manipulation tactics used in scams.
+579. Photo Provenance Checker: Helping people trace and verify the source of images they find online.
+580. Collectibles Due Diligence Guide: Teaching collectors to research items before buying to avoid fakes.
+Advanced Civil Engineering, Tunneling & Skyscraper Mechanics
+571. Tunnel Boring Machine Soil Face Blade Torque Balancers: Processing cutting-head pressure shifts to identify hidden muddy clay pockets or dense bedrock walls before machinery breaks.
+572. Skyscraper Core Sway Liquid Tuned Damper Regulators: Real-time adjustments of massive valve systems inside tower water dampers to counteract heavy wind oscillations during storms.
+573. Suspension Bridge Cable Rust Internal Acoustic Emitters: Listening for high-frequency micro-snapping sounds inside metal casings to find fraying internal wires.
+574. Sewer System Concrete Biogenic Sulfide Corrosion Estimators: Modeling gas movement trends over decades to locate city pipe sections that need immediate protective chemical layers.
+575. Earthquake Foundation Soil Liquefaction Hazard Calculators: Analyzing localized seismic wave logs to map building structural safety levels over water-logged soft grounds.
+576. Retaining Wall Ground Pressure Structural Tilting Monitors: Processing laser line distance scans to identify microscopic movement trends in highway mountain retainers.
+577. Pre-Stressed Concrete Girder Internal Strain Analytics: Tracking micro-sensors cast inside bridge supports to flag unexpected structural load drops or material fatigue.
+578. Underwater Tunnel Segment Joint Compression Solvers: Monitoring moisture changes and expansion levels in seals connecting deep vehicle traffic channels.
+79. Skyscraper Complex Facade Glass Wind Eddy Simulators: Modeling high-speed wind movements around unique tower shapes to calculate safe window glass thickness boundaries.
+580. Dam Foundation Grout Curtain Subsurface Leak Trackers: Processing water pressure sensor feeds to map hidden erosion tunnels cutting beneath concrete gravity dams.
+581. Home Structural DIY Guide: Teaching homeowners which structural checks are DIY and which need pros.
+582. Building Code Basics Tutor: Explaining why building codes exist and how they protect homes.
+583. Elevator Safety Awareness Guide: Teaching practical safety behavior in elevators and escalators.
+584. Skyscraper Engineering Explainer: Explaining how supertall buildings stand, sway, and stay safe.
+585. Home Inspection Red Flags Guide: Helping buyers understand common structural red flags in homes.
+586. Concrete Care for Homeowners: Teaching practical care and repair of concrete driveways and patios.
+587. Stair & Railing Safety Checker: Helping homeowners check stairs and railings for safety.
+588. Seismic Retrofits Explainer: Explaining seismic retrofit options and when homes need them.
+589. Infrastructure Appreciation Course: Teaching the public how bridges, tunnels, and towers are engineered.
+590. Public Works Career Pathfinder: Mapping careers in construction, engineering, and public infrastructure.
+Industrial Metallurgy, Chemical Blending & Technical Manufacturing
+581. Alloy Crystal Microstructure Tensile Load Simulators: Testing molecular alignment designs to engineer lighter, crack-resistant structural metals for automotive use.
+582. Industrial Fluid Catalyst Aging Lifespan Predictors: Analyzing chemical reaction speed drops to schedule reactor cleanings before production output degrades.
+583. Scrap Metal Optical Laser Separation Controllers: Coordinating high-speed air-jet triggers to separate aluminum, brass, and copper scrap pieces moving on factory belts.
+584. Foundry Mold Cooling Thermal Defect Diagnostics: Processing thermal imaging video of cooling metal castings to catch internal air bubbles or hidden micro-fractures.
+585. Polymer Chemical Composition Molecule Designers: Modeling plastic chain bonds to engineer biodegradable plastics that match traditional durability metrics.
+586. Mining Tailings Earthen Dam Seismic Stability Trackers: Processing micro-vibration logs from toxic waste facilities to find early structural shifting risks.
+587. Glass Factory Slurry Mix Mineral Purifiers: Readjusting sand and mineral ratios live based on sand batch impurities to maintain perfect optical glass clarity.
+88. Battery Cathode Crystalline Degradation Models: Simulating lithium-ion degradation over 10,000 deep charging runs to build longer-lasting commercial power packs.
+589. Industrial Coating Marine Corrosion Simulators: Modeling ocean saltwater spray environment stresses to design durable protective paint finishes for deep-sea oil platforms.
+590. Pharmaceutical Powder Blending Uniformity Lasers: Processing optical metric analysis on medication mixing lines to stop active chemical ingredient dosing errors.
+591. Metal Basics for Makers: Teaching makers how metals differ and which to choose for projects.
+592. Welding Safety Basics Guide: Teaching safe practices for beginner welders and metal workers.
+593. Metal Cleaning & Care Guide: Helping people clean, protect, and maintain metal items and surfaces.
+594. Rust Prevention Planner: Teaching practical ways to prevent and treat rust at home and shop.
+595. Knife Sharpening Guide: Teaching effective sharpening techniques for kitchen and pocket knives.
+596. Metal Recycling Decoder: Helping people understand what metals are recyclable and how to recycle them.
+597. Casting & Forging Basics Tutor: Explaining how metal casting and forging work, accessibly.
+598. Alloy Awareness Guide: Explaining common alloys in everyday products in plain terms.
+599. Metal Art Project Planner: Planning metal art and craft projects with materials and safety.
+600. Hardware Store Shopper Guide: Helping DIYers buy the right fasteners, metals, and hardware.
+Advanced Medical Informatics, Clinical Operations & Hospital Tech
+591. Oncology Target Radiation Margins Mapping: Calculating exact beam boundaries around tumors to maximize cancer cell destruction while sparing healthy tissue.
+592. Electronic Health Records Clinical Coding Error Auditors: Cross-checking physician clinical text notes against standard billing codes to avoid immediate insurance claim denials.
+593. Radiology X-Ray Soft Tissue Anomaly Pre-Screeners: Highlighting microscopic irregularities in CT or MRI scans to save diagnostic time for radiologists.
+594. Clinical Drug Trial Patient Matching Engines: Scanning anonymous health record banks to automatically find eligible candidates for rare disease medications.
+595. Telehealth Triage Intake Symptom Routers: Conversational software tools that grade the severity of patient symptoms to instantly route them to the correct medical specialist.
+596. Dental Radiograph Early Cavity Decay Analyzers: Processing digital mouth scans to locate early-stage enamel decay or bone density loss hidden below gumlines.
+597. Physical Therapy Posture Cam Correction Systems: Utilizing standard home webcams to trace joint angles and fix patient rehabilitation movements during remote exercises.
+98. Ergonomic Remote Office Space Photo Graders: Processing home workspace images to recommend adjustments for desk heights, monitors, and chairs to reduce spinal strain.
+599. Chronic Pain Condition Trigger Factor Trackers: Correlating daily food, stress, sleep, and local weather logs to find hidden environmental triggers for neurological pain.
+600. Longevity Biomarker Blood Panel Advisory Tools: Tracking long-term changes in blood chemical values to suggest customized lifestyle and nutrient optimization routines.
+601. Medical App Evaluation Guide: Helping people evaluate health apps for credibility and privacy.
+602. Patient Portal Navigator: Teaching patients to use portals, records, and messaging effectively.
+603. Health Data Privacy Guide: Helping people understand and control their health data sharing.
+604. Appointment Preparation Coach: Preparing patients with history, questions, and documents for visits.
+605. Telehealth First-Timer Guide: Teaching people how to prepare for and succeed at telehealth visits.
+606. Lab Result Interpreter Guide: Helping patients understand lab results in context, with caution.
+607. Care Transition Planner: Helping patients and families manage transitions between care settings.
+608. Second Opinion Navigator: Guiding patients through seeking and preparing for second opinions.
+609. Clinical Trial Finder Guide: Helping patients find and evaluate relevant clinical trials.
+610. Health Insurance Claim Tracker: Helping patients understand and track insurance claims and appeals.
+
